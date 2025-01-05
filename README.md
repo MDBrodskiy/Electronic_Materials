@@ -10,7 +10,7 @@
 <!-- BACKGROUND & TITLE -->
 <p align="center">
   <a href="https://github.com/MDBrodskiy/Electronic_Materials">
-    <img src="images/background.png" alt="background">
+    <img src="images/background.jpg" alt="background">
   </a>
   <h3 align="center">Electronic Materials</h3>
 <br />
