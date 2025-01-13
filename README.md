@@ -23,6 +23,7 @@
     * [**Bonding Overview**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture1.pdf)
     * [**Atomic Structure**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture2.pdf)
     * [**Ionic Bonding**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture3.pdf)
+    * [**Covalent Bonding**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture4.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Homework/)
 * [**Exams**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Exams/)
 
