@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Electronic Materials
+% Professor: J. Adams
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 1}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: J. Adams}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item 
+
+    \begin{enumerate}
+
+      \item First and foremost, we want to calculate the percent by mass. We know that percent may be expressed as:
+
+        $$\%=\frac{\text{Contribution of Component}}{\text{Total Mass}}$$
+
+        Given that $w$ represents the weight fraction of an element, and $M$ represents the atomic mass of an element, we may express the contribution of a single $i$-th element as:
+
+        $$m_i=\frac{w_i}{M_i}$$
+
+        For an alloy consisting of $N$ elements, we can find the total mass by summing the individual contribution of each element, up to $N$:
+
+        $$m_{tot}=\frac{w_1}{M_1}+\frac{w_2}{M_2}+\cdots+\frac{w_N}{M_N}$$
+
+        We then combine the two above expressions to get:
+
+        $$\boxed{n_i=\frac{\dfrac{w_i}{M_i}}{\dfrac{w_1}{M_1}+\dfrac{w_2}{M_2}+\cdots+\dfrac{w_N}{M_N}}}$$
+
+      \item We can reverse the molar mass obtained in part (a) and re-express the weight fraction in terms of it. We follow a similar process to obtain the individual contribution:
+
+        $$w_i=n_iM_i$$
+
+        We then find the total as:
+
+        $$w_{tot}=n_AM_A+n_BM_B+\cdots+n_NM_N$$
+
+        Thus, we once again obtain a general expression:
+
+        $$\boxed{w_i=\frac{n_iM_i}{n_AM_A+n_BM_B+\cdots+n_NM_N}}$$
+
+      \item Per the periodic table, we may obtain the atomic masses as:
+
+        $$n_{\ce{Cd}}=112.41\left[ \si{\gram\over\mol} \right]$$
+        $$n_{\ce{Se}}=78.96\left[ \si{\gram\over\mol} \right]$$
+
+        Given that there is only one of each atom, we may write:
+
+        $$\boxed{\%_{\ce{Cd}}=\frac{112.41}{112.41+78.96}=.5874}$$
+        $$\boxed{\%_{\ce{Se}}=1-.5874=.4126}$$
+
+        Thus, per 100 grams of \ce{CdSe}, we would find:
+
+        $$\boxed{m_{\ce{Cd}}=58.74[\si{\gram}]}$$
+        $$\boxed{m_{\ce{Se}}=41.26[\si{\gram}]}$$
+
+      \item Using our equations from before, along with atomic masses obtained from the periodic table, we can find:
+
+        $$\%_{\ce{Se}}=\frac{\dfrac{.77}{78.96}}{\dfrac{.77}{78.96}+\dfrac{.2}{127.6}+\dfrac{.03}{30.974}}$$
+        $$\boxed{\%_{\ce{Se}}=.7936}$$
+
+        $$\%_{\ce{Te}}=\frac{\dfrac{.2}{127.6}}{\dfrac{.77}{78.96}+\dfrac{.2}{127.6}+\dfrac{.03}{30.974}}$$
+        $$\boxed{\%_{\ce{Te}}=.1276}$$
+
+        $$\%_{\ce{P}}=1-.7936-.1276$$
+        $$\boxed{\%_{\ce{P}}=.078842}$$
+
+    \end{enumerate}
+
+  \item 
+
+    \begin{enumerate}
+
+      \item We may use Coulomb's law to identify the potential energies of all actors in the picture. Thus, we need to check the electron-electron interaction, proton-proton interaction, and the interaction of both electron-proton pairs. For this, we should note that electrons have a charge $-e$, while protons have a charge $+e$. Thus, let us denote the left-most electron as $e_1$, the right-most electron as $e_2$, and, similarly, the left-most proton as $p_1$ and the right-most proton as $p_2$. This yields:
+
+        $$PE_{e_1p_1p_2}=\frac{-e^2}{4\pi\varepsilon_o r_o}+\frac{-e^2}{4\pi\varepsilon_o (3r_o)}$$
+        $$PE_{e_2p_1p_2e_1}=\frac{-e^2}{4\pi\varepsilon_o r_o}+\frac{-e^2}{4\pi\varepsilon_o r_o}+\frac{e^2}{4\pi\varepsilon_o (2r_o)}$$
+        $$PE_{p_1p_2}=\frac{e^2}{4\pi\varepsilon_o (2r_o)}$$
+
+        By superposition we then sum each case to get:
+
+        $$PE_{tot}=\frac{e^2}{8\pi\varepsilon_or_o}-\frac{3e^2}{8\pi\varepsilon_or_o}-\frac{e^2}{3\pi\varepsilon_or_o}$$
+        $$PE_{tot}=-\frac{7e^2}{12\pi\varepsilon_or_o}$$
+
+        We can then substitute our known values to get:
+
+        $$PE_{tot}=-\frac{7\left( 1.6\cdot10^{-19} \right)^2}{12\pi\left( 8.85\cdot10^{-12} \right)\left( .0529\cdot10^{-9} \right)}$$
+        $$\boxed{PE_{tot}=-1.0153\cdot10^{-17}[\si{\joule}]=-63.377[\si{\eV}]}$$
+
+        Thus, we may see that, because the total energy is negative, this arrangement is favorable.
+
+      \item We may write the energy of an isolated hydrogen as:
+
+        $$E_{\ce{H}}=2(-13.6)=-27.2[\si{\eV}]$$
+
+        We may see that the difference in the above arrangement and two isolated hydrogen atoms is:
+
+        $$\Delta PE=-63.377-2(-27.2)=-8.977[\si{\eV}]$$
+
+        Using the Virial theorem, the change in covalent bond energy is then:
+
+        $$\Delta E=\frac{1}{2}\Delta PE$$
+        $$\boxed{\Delta E=-4.4885[\si{\eV}]}$$
+
+        As such, we see that the overall energy of the shown arrangement yields a lower potential energy than two isolated hydrogen atoms; therefore, the arrangement is energetically favorable. We may observe that our calculated value differs by the experimental $-4.51[\si{\ev}]$ by $<.5\%$, and is therefore negligible.
+
+    \end{enumerate}
+
+  \item First and foremost, we are given the energy as:
+
+    $$E(r)=-\frac{e^2M}{4\pi\varepsilon_o r}+\frac{B}{r^m}$$
+
+    We must recall that, at an equilibrium, the energy is zero, and, therefore, we want:
+
+    $$0=\frac{d}{dr}\left[-\frac{e^2M}{4\pi\varepsilon_o r_o}+\frac{B}{r_o^m}\right]$$
+
+    We may rearrange to solve for the radius:
+
+    $$\frac{e^2M}{4\pi\varepsilon_o r_o^2}=\frac{mB}{r_o^{m+1}}$$
+    $$r_o^{m-1}=\frac{36\pi\varepsilon_oB}{e^2M}$$
+
+    Plugging in known values, we may solve to get:
+
+    $$r_o=\sqrt[8]{\frac{36\pi(8.85\cdot10^{-12})(1.192\cdot10^{-104})}{(1.6\cdot10^{-19})^2(1.763)}}$$
+    $$\boxed{r_o=3.56\cdot10^{-10}[\si{\meter}]=3.56[\si{\angstrom}]}$$
+
+    We then substitute this into the formula for energy to get:
+
+    $$E(r_o)=-\frac{e^2M}{4\pi\varepsilon_o r_o}+\frac{B}{r^m}$$
+    $$E(r_o)=-\frac{(1.6\cdot10^{-19})^2(1.763)}{4\pi(8.85\cdot10^{-12})(3.56\cdot10^{-10})}+\frac{1.192\cdot10^{-104}}{(3.56\cdot10^{-10})^9}$$
+
+    This gives us:
+
+    $$\boxed{E(r_o)=-1.0125\cdot10^{-18}[\si{\joule}]=-6.319528[\si{\ev}]}$$
+
+\end{enumerate}
+
+\end{document}
+
