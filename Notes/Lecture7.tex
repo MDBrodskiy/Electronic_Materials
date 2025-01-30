@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Electronic Materials
+% Professor: J. Adams
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Lecture 7 — Conduction in Metals}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: J. Adams}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Thermoelectrics
+
+    \begin{itemize}
+
+      \item The thermoelectric effect is the direct conversion of temperature differences ($\Delta T$) to electric voltage and vice versa
+
+      \item A thermoelectric device creates voltage when there is a different temperature on each side
+
+      \item Conversely, when a voltage is applied to it, it creates a temperature difference ($\Delta T$)
+
+      \item At the atomic scale, an applied temperature gradient causes charge carries in the material to diffuse from the hot side to the cold side thus creating an electrical currentX-Ray Diffraction
+
+    \end{itemize}
+
+  \item Average Velocity of Charge Carriers ($v_{dx}$)
+
+    $$v_{dx}=\frac{1}{N}[v_{x1}+v_{x2}+\cdots+v_{xN}]=\frac{eE_x}{m_e}\overline{(t-t_i)}$$
+
+    \begin{itemize}
+
+      \item Time-averaged velocity, acceleration over many collisions is zero
+
+    \end{itemize}
+
+  \item Temperature Dependence of Resistivity
+
+    \begin{itemize}
+
+      \item To determine the temperature dependence of $\sigma$, we must first consider the temperature dependence of $\tau$, since this determines the resistivity
+
+    \end{itemize}
+
+  \item Mean Free Path
+
+    \begin{itemize}
+
+      \item Since $\tau$ is the time for one scattering process, then $\mu\tau$ is the length traversed before one scattering event (the mean free path):
+
+        $$l=\mu\tau$$
+
+    \end{itemize}
+
+  \item Temperature Dependent Drift Mobility
+
+    \begin{itemize}
+
+      \item The thermal vibrations of an atom can be considered as a simple harmonic oscillator (think mass on a spring)
+
+      \item The average kinetic energy of this system is:
+
+        $$E_k=\frac{1}{4}Ma^2\omega^2\approx \frac{1}{2}kT$$
+
+        \begin{itemize}
+
+          \item Where $a$ is the amplitude of vibration, $\omega$ is the oscillation frequency, $k$ is the Boltzmann constant, and $T$ is the temperature, so $a^2\propto T$
+
+            $$\tau\propto\frac{1}{\pi a^2}\propto\frac{1}{T}\quad\text{ or }\quad \tau=\frac{C}{T}$$
+
+            $$\mu_d=\frac{eC}{m_eT}$$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Matthiessen's Rule
+
+    \begin{itemize}
+
+      \item The theory of conduction that only considers thermal vibration works only for pure metals, not for metallic alloys
+
+      \item States that there are two scattering contributions: thermal and impurity
+
+      \item We now have two $\tau$: $\tau_T$ and $\tau_l$
+
+      \item The net probability of scattering (the overall frequency of scattering) then becomes:
+
+        $$\frac{1}{\tau}=\frac{1}{\tau_T}\frac{1}{\tau_l}$$
+
+      \item The drift mobility, $\mu_d$ depends on the effective scattering time, so:
+
+        $$\frac{1}{\mu_d}=\frac{1}{\mu_L}+\frac{1}{\mu_I}$$
+
+        \begin{itemize}
+
+          \item Where $\mu_L$ is the lattice-scattering-limited drift mobility and $\mu_I$ is the impurity-scattering-limited drift mobility
+
+        \end{itemize}
+
+      \item The resistivity then becomes:
+
+        $$\rho=\frac{1}{en\mu_d}=\frac{1}{en\mu_L}+\frac{1}{en\mu_I}$$
+        $$\rho=\rho_T+\rho_R$$
+
+      \item Since we have $\rho_T=AT$, we know that the effective resistivity can be given by:
+
+        $$\rho=AT+B$$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
