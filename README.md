@@ -26,6 +26,7 @@
     * [**Covalent Bonding**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture4.pdf)
     * [**Metallic Bonding**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture5.pdf)
     * [**X-Ray Diffraction**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture6.pdf)
+    * [**Conduction in Metals**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture7.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Homework/)
     * [**Homework 1**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW1.pdf)
     * [**Homework 2**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW2.pdf)
