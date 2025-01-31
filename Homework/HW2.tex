@@ -52,9 +52,23 @@
         $$2\theta_{211}=2\sin^{-1}\left( \frac{.154}{2(.117)} \right)$$
         $$\boxed{2\theta_{211}=82.31^{\circ}}$$
 
-      \item 
+      \item We can perform the calculation by using the following formula:
 
-      \item 
+        $$\rho=\frac{n}{A}$$
+
+        Where $n$ is the quantity of atoms and $A$ is the area. $\rho$ represents the areal density of the atoms. Thus, we find $A$ by squaring $a=.2866$ and using it to divide the quantity of atoms. Since (110) and (200) both have 2 atoms, we find:
+
+        $$\rho_{110}=\rho_{200}=\frac{2}{.2866^2}$$
+        $$\boxed{\rho_{110}=\rho_{200}=24.349\left[ \si{atoms\over\nano\meter\squared} \right]}$$
+
+        We then find the (211) areal density:
+
+        $$\rho_{211}=\frac{4}{.2866^2}$$
+        $$\boxed{\rho_{211}=48.698\left[ \si{atoms\over\nano\meter\squared} \right]}$$
+
+        Since the intensity is directly proportional to the areal density, we see that (110) and (200) have lower peaks than (211).
+
+      \item Temperature fluctuations can result in changes in the diffraction pattern due to thermal expansion, as well as atomic vibrations, which result in reduced intensity of the peaks. This can be foregone by introducing temperature control, preparing the diffraction measuring machine for the current thermal conditions, and/or minimizing the time taken to measure the diffraction (so that opportunities for temperature fluctuation are minimized)
 
     \end{enumerate}
 
@@ -78,7 +92,9 @@
 
         $$\boxed{(210), (201), (102), (021), (012)}$$
 
-      \item 
+        As well as any sign-based permutations of the above, such as (-210).
+
+      \item In X-Ray Diffraction (XRD) analysis, diffraction patterns depend on families of planes, rather than each individual plane. These families are defined by symmetry equivalence (as with the above example). Every family of planes has the same diffraction angle, and, thus, when performing XRD analysis, it is necessary to take symmetry equivalence into account.
 
     \end{enumerate}
 
@@ -86,11 +102,35 @@
 
     \begin{enumerate}
 
-      \item 
+      \item Rietveld Refinement may be performed by iterating calculations of theoretical patterns. This is done to account for instrumentation factors/variability and structural parameters of the crystalline material. The calculated theoretical patterns are then compared to the observed values, and a fit is made by using least-squares minimization. Applying this technique to BCC iron and FCC austenite, we can break up the mixed peaks appearing in the XRD pattern, these differentiated peaks can then be used to determine factors such as the Miller indices and atomic positions of the materials.
 
-      \item 
+      \item There are 9 key steps to the Rietveld refinement process (the first two of which are standard XRD procedure):
 
-      \item 
+        \begin{enumerate}
+
+          \item Data Collection (and subsequently Bragg angle calculation)
+
+          \item Crystalline Identification (usually through consulting a common materials database)
+
+          \item Applying Structural Models (using known crystal structures and a calculation program)
+
+          \item Correcting the Background Signal (by applying polynomial or spline functions to remove background components)
+
+          \item Refining the Dataset (by modifying the peak widths and shapes to expected values)
+
+          \item Using Lattice Parameter Refinement to Match Peaks of BCC Iron and FCC Austenite
+
+          \item Modifying Atomic Positions (To Lower Residual Error)
+
+          \item Microstrain Refinement (To account for peak modulation as a result of microstrains in the material)
+
+          \item Verify the Model Through Statistical Analysis
+
+        \end{enumerate}
+
+        Effectively, applying these Rietveld Refinement Model steps allows for cleaner, more accurate data output. The key components that are refined are: lattice parameters/Miller indices, atomic positions and occupancies, background intensity correction, preferred orientation factors, and grain and microstrain adjustment.
+
+      \item Quite obviously, incorrect model parameters would result in incorrect data and, consequently analysis. For example, an incorrect phase model could identify an incorrect solution, improper application of background correction could result in invalid peak intensities, and incorrectly accounting for grain and microstrain could result in miscalculation of crystallite size. The best way to account for such errors is by iterating the process and performing the experiment multiple times, as well as by validating data through statistical analysis.
 
     \end{enumerate}
 
@@ -98,11 +138,15 @@
 
     \begin{enumerate}
 
-      \item 
+      \item A vacancy refers to a material defect in which atoms are removed or missing from the crystal structure. The missing atoms result in decreased scattering, and, thus, decreased intensity of XRD peaks. Though this affects XRD analysis, diffraction patterns usually remain quite stable despite vacancies, as the peak shapes and positions usually remain the same. A dislocation refers to misalignment of atomic arrangements within the crystalline structure, which results in broadened XRD peaks, especially at higher X-Ray angles. Furthermore, there is a variety of dislocation types, all of which affect peak widths and shapes differently. Grain boundaries refer to the connection points between various crystalline area orientations. The grain refers to the size of different crystalline substructures, and limit the domain areas. XRD peaks may be broadened or shrunk by varying the grain size. The grain affects XRD analysis the most out of the aforementioned deficiencies, so much so that peaks may merge into each other.
 
-      \item 
+      \item As stated in part (a), broadened peaks are most likely caused by either dislocations or grain boundaries, more likely the latter. Thus, it is likely small crystallite size influencing the broadened peaks. As such, we may apply the Scherrer equation to account for this. The equation is as follows:
 
-      \item 
+        $$L=\frac{K\lambda}{\beta\cos(\theta)}$$
+
+        Where $L$ is the average crystallite size, $K$ is the Scherrer constant, $\lambda$ is the wavelength of the X-ray, $\beta$ is the full-width at half maximum of the peak, and $\theta$ is the Bragg angle. Following this formula, we may record the XRD pattern, find the full-width at half maximum of the peaks, subsequently calculating the Bragg angle, and then applying the formula to calculate the average crystallite size.
+
+      \item To apply the Rietveld Refinement Model, we first need to define the initial crystal structure (or, preferably, use something with a large crystallite size, typically $>1[\si{\micro\meter}]$), the atomic positioning, parameters of the instrumentation, and accounting for microstrain. Accounting for microstrain, we should be able to adjust the results to correctly observe the peaks. The Rietveld Refinement Model can be used to account for this microstrain by iterating analysis and then performing least-squares minimization to find a fitting average.
 
     \end{enumerate}
 
