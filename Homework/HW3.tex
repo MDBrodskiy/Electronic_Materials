@@ -1,0 +1,64 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Electronic Materials
+% Professor: J. Adams
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 3}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: J. Adams}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item Per our formula, we know:
+
+    $$\mu_d=\frac{\sigma}{\eta e}=\frac{1}{\eta e\rho}$$
+
+    To find $\eta$, we use:
+
+    $$\eta=\frac{\rho N_A}{M_{at}}$$
+
+    Also, we need to find $\rho$, or the resistivity at $22\left[ \si{\celsius} \right]$. As such, we get:
+
+    $$\rho_{22}=\rho_o[1+\alpha(T-T_o)]$$
+
+    Obtaining our values from a known value table, we get:
+
+    $$\rho_{22}=2.44\cdot10^{-8}[1+.003715(22-20)]$$
+    $$\rho_{22}=2.458\cdot10^{-8}\left[ \si{\ohm\meter} \right]$$
+
+    We return to the electron concentration to get:
+
+    $$\eta=\frac{2.458\cdot10^{-8}\cdot 6.022\cdot10^{23}}{196.67}$$
+    $$\eta=590.96\cdot10^{26}\left[ \si{electron\over\meter\cubed} \right]$$
+
+    Finally, we calculate the drift mobility:
+
+    $$\mu_d=\frac{1}{590.96\cdot10^{26}\cdot1.6\cdot10^{-19}\cdot 2.458\cdot10^{-8}}$$
+    $$\boxed{\mu_d=4.3027\cdot10^{-3}\left[ \si{\meter\squared\over\volt\second} \right]}$$
+
+    Furthermore, with the given velocity, we may find the mean free path as:
+
+    $$\lambda=\frac{\mu_d m_e\mu_V}{e}$$
+
+    This gives us:
+
+    $$\lambda=\frac{4.3027\cdot10^{-3}\cdot9.1\cdot10^{-31}\cdot1.4\cdot10^{6}}{1.6\cdot10^{-19}}$$
+    $$\boxed{\lambda=3.426\cdot10^{-8}[\si{\meter}]}$$
+
+  \item
+
+  \item
+
+  \item
+
+\end{enumerate}
+
+\end{document}
+
