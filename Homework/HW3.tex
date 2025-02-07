@@ -16,6 +16,8 @@
 
 \begin{enumerate}
 
+    \setcounter{enumi}{2}
+
   \item Per our formula, we know:
 
     $$\mu_d=\frac{\sigma}{\eta e}=\frac{1}{\eta e\rho}$$
@@ -52,11 +54,214 @@
     $$\lambda=\frac{4.3027\cdot10^{-3}\cdot9.1\cdot10^{-31}\cdot1.4\cdot10^{6}}{1.6\cdot10^{-19}}$$
     $$\boxed{\lambda=3.426\cdot10^{-8}[\si{\meter}]}$$
 
-  \item
+    \setcounter{enumi}{4}
 
-  \item
+  \item Let us begin by denoting the temperature coefficient resistivity as $\tau_{\rho}$. We can use the following formula:
 
-  \item
+    $$\tau_{\rho}=\frac{R_2-R_1}{R_1(T_2-T_1)}$$
+
+    Alternatively, we may see that this is equivalent to:
+
+    $$\tau_{\rho}=\frac{1}{\rho_o}\left( \frac{d\rho}{dT} \right)\Big|_{T_o}$$
+
+    Thus, we may find the slope at the reference temperature and the resistivity at this temperature. Let us begin by looking at Fe (Iron) at $0[\si{\celsius}]$. We may see:
+
+    $$\rho_0\approx .12\cdot10^{-6}[\si{\ohm\meter}]$$
+
+    For ease of visualization, let us take the reference point as $T_o=400[\si{\celsius}]$ this gives us:
+
+    $$\left( \frac{d\rho}{dT} \right)\Big|_{400[\si{\celsius}]}\approx \frac{(.37-.12)\cdot10^{-6}}{400-0}$$
+  $$\left( \frac{d\rho}{dT} \right)\Big|_{400[\si{\celsius}]}\approx 6.25\cdot10^{-10}[\si{\ohm\meter\per\celsius}]$$
+
+    We then calculate the coefficient as:
+
+    $$\tau_{\rho,\ce{Fe}\to0[\si{\celsius}]}=\frac{1}{.12\cdot10^{-6}}\left( 6.25\cdot10^{-10} \right)$$
+    $$\boxed{\tau_{\rho,\ce{Fe}\to0[\si{\celsius}]}=5.2083\cdot10^{-3}[\si{\per\celsius}]}$$
+
+    Similarly, we can find Fe (Iron) at $500[\si{\celsius}]$:
+
+    $$\rho_{500}\approx .57\cdot10^{-6}[\si{\ohm\meter}]$$
+
+    We can then find the slope using a 900$[\si{\celsius}]$ reference temperature:
+
+    $$\left( \frac{d\rho}{dT} \right)\Big|_{900[\si{\celsius}]}\approx \frac{(1.13-.57)\cdot10^{-6}}{900-500}$$
+    $$\left( \frac{d\rho}{dT} \right)\Big|_{900[\si{\celsius}]}\approx 1.4\cdot10^{-9}[\si{\ohm\meter\per\celsius}]$$
+
+  We then calculate the coefficient:
+
+    $$\tau_{\rho,\ce{Fe}\to500[\si{\celsius}]}=\frac{1}{.57\cdot10^{-6}}\left( 1.4\cdot10^{-9} \right)$$
+    $$\boxed{\tau_{\rho,\ce{Fe}\to500[\si{\celsius}]}=2.4561\cdot10^{-3}[\si{\per\celsius}]}$$
+
+    We then move on to electrotechnical steel. We may get:
+
+    $$\rho_{0}\approx .5\cdot10^{-6}[\si{\ohm\meter}]$$
+
+    We then find the slope using a 400$[\si{\celsius}]$ reference temperature:
+
+    $$\left( \frac{d\rho}{dT} \right)\Big|_{400[\si{\celsius}]}\approx \frac{(.69-.5)\cdot10^{-6}}{400-0}$$
+    $$\left( \frac{d\rho}{dT} \right)\Big|_{400[\si{\celsius}]}\approx4.75\dot10^{-10}[\si{\ohm\meter\per\celsius}]$$
+
+    Finally, we find:
+
+    $$\tau_{\rho,\ce{Fe4\% C}\to0[\si{\celsius}]}=\frac{1}{.5\cdot10^{-6}}\left( 4.75\cdot10^{-10} \right)$$
+    $$\boxed{\tau_{\rho,\ce{Fe4\%}\to0[\si{\celsius}]}=9.5\cdot10^{-4}[\si{\per\celsius}]}$$
+
+    Next, we find the coefficient for electrotechnical steel at $500[\si{\celsius}]$ using a $900[\si{\celsius}]$ reference point:
+
+    $$\rho_{500}\approx .72\cdot10^{-6}[\si{\ohm\meter}]$$
+
+    $$\left( \frac{d\rho}{dT} \right)\Big|_{900[\si{\celsius}]}\approx \frac{(1.23-.72)\cdot10^{-6}}{900-500}$$
+    $$\left( \frac{d\rho}{dT} \right)\Big|_{900[\si{\celsius}]}\approx1.275\dot10^{-9}[\si{\ohm\meter\per\celsius}]$$
+
+    This gives us:
+
+    $$\tau_{\rho,\ce{Fe4\% C}\to500[\si{\celsius}]}=\frac{1}{.72\cdot10^{-6}}\left( 1.275\cdot10^{-9} \right)$$
+    $$\boxed{\tau_{\rho,\ce{Fe4\%}\to0[\si{\celsius}]}=1.7708\cdot10^{-3}[\si{\per\celsius}]}$$
+
+    We may observe that, at higher temperatures, the coefficient generally increases for both forms of iron. Furthermore, we may observe that, since the difference between both irons decreases as temperature increases, the values of coefficients converge as well. It is important to note, however, that electrotechnical steel has a much more stable resistivity than regular iron.
+
+    \setcounter{enumi}{8}
+
+  \item Let us begin by simply recreating the table:
+
+    \begin{center}
+      \footnotesize
+      \begin{tabular}[H]{|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \rowcolor{black!35} & \ce{AgAu} & \ce{AuAg} & \ce{CuPd} & \ce{AgPd} & \ce{AuPd} & \ce{PdPt} & \ce{PtPd} & \ce{CuNi}\\
+        \hline
+        $X$ & 8.8\%\ce{Au} & 8.77\%\ce{Ag} & 6.2\%\ce{Pd} & 10.1\%\ce{Pd} & 8.88\%\ce{Pd} & 7.66\%\ce{Pt} & 7.1\%\ce{Pd} & 2.16\%\ce{Ni}\\
+        \hline
+        \rowcolor{black!20} $\rho_o [\si{\nano\ohm\meter}]$ & 16.2 & 22.7 & 17 & 16.2 & 22.7 & 108 & 105.8 & 17\\
+        \hline
+        $\rho_X [\si{\nano\ohm\meter}]$ & 44.2 & 54.1 & 70.8 & 59.8 & 54.1 & 188.2 & 146.8 & 50\\
+        \hline
+        \rowcolor{black!20} $C_{eff}$ & & & & & & & &\\
+        \hline
+        $X$ & 15.4\%\ce{Au} & 24.4\%\ce{Ag} & 13\%\ce{Pd} & 15.2\%\ce{Pd} & 17.1\%\ce{Pd} & 15.5\%\ce{Pt} & 13.8\%\ce{Pd} & 23.4\%\ce{Ni}\\
+        \hline
+        \rowcolor{black!20} $\rho_{X'}'$ &  &  &  &  &  &  &  & \\
+        \hline
+        $\rho_{X'}' [\text{Exp.}]$ & 66.3 & 107.2 & 121.6 & 83.8 & 82.2 & 244 & 181 & 300\\
+        \hline
+      \end{tabular}
+    \end{center}
+
+    To solve, we can use the formula $\rho=\rho_o+C_{eff}X(1-X)$. We plug this into a solver (GNU Octave) to iterate over the given values, which allows us to obtain $C_{eff}$:
+
+    \begin{center}
+      \footnotesize
+      \begin{tabular}[H]{|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \rowcolor{black!35} & \ce{AgAu} & \ce{AuAg} & \ce{CuPd} & \ce{AgPd} & \ce{AuPd} & \ce{PdPt} & \ce{PtPd} & \ce{CuNi}\\
+        \hline
+        $X$ & 8.8\%\ce{Au} & 8.77\%\ce{Ag} & 6.2\%\ce{Pd} & 10.1\%\ce{Pd} & 8.88\%\ce{Pd} & 7.66\%\ce{Pt} & 7.1\%\ce{Pd} & 2.16\%\ce{Ni}\\
+        \hline
+        \rowcolor{black!20} $\rho_o [\si{\nano\ohm\meter}]$ & 16.2 & 22.7 & 17 & 16.2 & 22.7 & 108 & 105.8 & 17\\
+        \hline
+        $\rho_X [\si{\nano\ohm\meter}]$ & 44.2 & 54.1 & 70.8 & 59.8 & 54.1 & 188.2 & 146.8 & 50\\
+        \hline
+        \rowcolor{black!20} $C_{eff}$ & 348.88 & 392.46 & 925.1 & 480.18 & 388.06 & 1133.85 & 621.6 & 1561.51\\
+        \hline
+        $X$ & 15.4\%\ce{Au} & 24.4\%\ce{Ag} & 13\%\ce{Pd} & 15.2\%\ce{Pd} & 17.1\%\ce{Pd} & 15.5\%\ce{Pt} & 13.8\%\ce{Pd} & 23.4\%\ce{Ni}\\
+        \hline
+        \rowcolor{black!20} $\rho_{X'}'$ &  &  &  &  &  &  &  & \\
+        \hline
+        $\rho_{X'}' [\text{Exp.}]$ & 66.3 & 107.2 & 121.6 & 83.8 & 82.2 & 244 & 181 & 300\\
+        \hline
+      \end{tabular}
+    \end{center}
+
+    We then use these $C_{eff}$ values to calculate the $\rho'_{X'}$ values, which gives us:
+
+    \begin{center}
+      \footnotesize
+      \begin{tabular}[H]{|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        \rowcolor{black!35} & \ce{AgAu} & \ce{AuAg} & \ce{CuPd} & \ce{AgPd} & \ce{AuPd} & \ce{PdPt} & \ce{PtPd} & \ce{CuNi}\\
+        \hline
+        $X$ & 8.8\%\ce{Au} & 8.77\%\ce{Ag} & 6.2\%\ce{Pd} & 10.1\%\ce{Pd} & 8.88\%\ce{Pd} & 7.66\%\ce{Pt} & 7.1\%\ce{Pd} & 2.16\%\ce{Ni}\\
+        \hline
+        \rowcolor{black!20} $\rho_o [\si{\nano\ohm\meter}]$ & 16.2 & 22.7 & 17 & 16.2 & 22.7 & 108 & 105.8 & 17\\
+        \hline
+        $\rho_X [\si{\nano\ohm\meter}]$ & 44.2 & 54.1 & 70.8 & 59.8 & 54.1 & 188.2 & 146.8 & 50\\
+        \hline
+        \rowcolor{black!20} $C_{eff}$ & 348.88 & 392.46 & 925.1 & 480.18 & 388.06 & 1133.85 & 621.6 & 1561.51\\
+        \hline
+        $X$ & 15.4\%\ce{Au} & 24.4\%\ce{Ag} & 13\%\ce{Pd} & 15.2\%\ce{Pd} & 17.1\%\ce{Pd} & 15.5\%\ce{Pt} & 13.8\%\ce{Pd} & 23.4\%\ce{Ni}\\
+        \hline
+        \rowcolor{black!20} $\rho_{X'}'$ &  61.654 &  95.094 &  121.629 &  78.093 &  77.712 &  256.506 &  179.743 & 296.891\\
+        \hline
+        $\rho_{X'}' [\text{Exp.}]$ & 66.3 & 107.2 & 121.6 & 83.8 & 82.2 & 244 & 181 & 300\\
+        \hline
+      \end{tabular}
+    \end{center}
+
+    We then use these $C_{eff}$ values to calculate the $\rho'_{X'}$ values, which gives us:
+
+    \setcounter{enumi}{12}
+
+  \item We may begin by writing out the formulas necessary to calculate the resistivity. First, we begin with the simple conductivity mixture rule:
+
+    $$\rho_{eff}=\rho_c\left( \frac{1+.5X_d}{1-X_d}\right)$$
+
+    Then, we write the Reynolds and Hough Rule:
+
+    $$\frac{\sigma_{eff}-\sigma_c}{\sigma_{eff}+2\sigma_c}=X_d\left( \frac{\sigma_d-\sigma_c}{\sigma_d+2\sigma_c} \right)$$
+
+    Note that $\sigma_d$ represents the  conductivity of air, while $X_d$ refers to the pores in the brass. Using the given information, we write:
+
+    $$\rho_{eff}=62\cdot10^{-9}\left( \frac{1+.075}{1-.15}\right)$$
+    $$\boxed{\rho_{eff}=7.2941\cdot10^{-8}[\si{\ohm\meter}]=78.412[\si{\nano\ohm\meter}]}$$
+
+    We then use the Reynolds and Hough Rule to write:
+
+    $$\frac{\sigma_{eff}-1.6129}{\sigma_{eff}+3.2258}=(.15)\left( \frac{-1.6129}{3.2258} \right)$$
+
+    We proceed to solve:
+
+    $$\frac{\sigma_{eff}-1.6129}{\sigma_{eff}+3.2258}=-.075$$
+    $$\sigma_{eff}-1.6129=(-.075)(\sigma_{eff}+3.2258)$$
+    $$1.075\sigma_{eff}-1.6129=-.2419$$
+    $$\sigma_{eff}=\frac{1.6129-.2419}{1.075}$$
+    $$\boxed{\sigma_{eff}=1.2753\cdot10^7[\si{\siemen\per\meter}]}$$
+
+    We then take the inverse to find the resistivity:
+
+    $$\boxed{\rho_{eff}=78.41[\si{\nano\ohm\meter}]}$$
+
+\end{enumerate}
+
+\end{document}
+
+  \item We may begin by writing out the formulas necessary to calculate the resistivity. First, we begin with the simple conductivity mixture rule:
+
+    $$\rho_{eff}=\rho_c\left( \frac{1+.5X_d}{1-X_d}\right)$$
+
+    Then, we write the Reynolds and Hough Rule:
+
+    $$\frac{\sigma_{eff}-\sigma_c}{\sigma_{eff}+2\sigma_c}=X_d\left( \frac{\sigma_d-\sigma_c}{\sigma_d+2\sigma_c} \right)$$
+
+    Note that $\sigma_d$ represents the  conductivity of air, while $X_d$ refers to the pores in the brass. Using the given information, we write:
+
+    $$\rho_{eff}=62\cdot10^{-9}\left( \frac{1+.075}{1-.15}\right)$$
+    $$\boxed{\rho_{eff}=7.2941\cdot10^{-8}[\si{\ohm\meter}]=78.412[\si{\nano\ohm\meter}]}$$
+
+    We then use the Reynolds and Hough Rule to write:
+
+    $$\frac{\sigma_{eff}-1.6129}{\sigma_{eff}+3.2258}=(.15)\left( \frac{-1.6129}{3.2258} \right)$$
+
+    We proceed to solve:
+
+    $$\frac{\sigma_{eff}-1.6129}{\sigma_{eff}+3.2258}=-.075$$
+    $$\sigma_{eff}-1.6129=(-.075)(\sigma_{eff}+3.2258)$$
+    $$1.075\sigma_{eff}-1.6129=-.2419$$
+    $$\sigma_{eff}=\frac{1.6129-.2419}{1.075}$$
+    $$\boxed{\sigma_{eff}=1.2753\cdot10^7[\si{\siemen\per\meter}]}$$
+
+    We then take the inverse to find the resistivity:
+
+    $$\boxed{\rho_{eff}=78.41[\si{\nano\ohm\meter}]}$$
 
 \end{enumerate}
 
