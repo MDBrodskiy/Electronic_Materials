@@ -1,0 +1,209 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Electronic Materials
+% Professor: J. Adams
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 4}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: J. Adams}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item We can write the maximum as:
+
+        $$E_g=\frac{hc}{\lambda}$$
+
+        Using our known information, we can express this as:
+
+        $$E_g=\frac{(4.136\cdot10^{-15})(3\cdot10^{8})}{600\cdot10^{-9}}$$
+
+        Using a solver, we obtain:
+
+        $$\boxed{E_g=2.068[\si{eV}]=3.31\cdot10^{-19}[\si{\joule}]}$$
+
+      \item Given the cross-sectional area ($A$) and light intensity ($I$), we know:
+
+        $$P=IA$$
+
+        Which then gives us:
+
+        $$P=(5\cdot10^{-2})(2)$$
+        $$\boxed{P=.1[\si{\milli\watt}]}$$
+
+        We can then calculate the number of pairs as:
+
+        $$N=\frac{P}{E_{ph}}$$
+
+        This gives us:
+
+        $$N=\frac{.1\cdot10^{-3}}{3.31\cdot10^{-19}}$$
+        $$N=3.0211\cdot10^{14}\left[\si{photons\over\second}\right]$$
+
+        Since each photon creates one pair, we get:
+
+        $$\boxed{E=3.0211\cdot10^{14}\left[\si{electrons\over\second}\right]}$$
+
+      \item From the same formula as part (a), we may rearrange to get:
+
+        $$\lambda=\frac{hc}{E_g}$$
+
+        We then plug in our known values to get:
+
+        $$\lambda=\frac{(4.136\cdot10^{-15})(3\cdot10^{8})}{1.42}$$
+
+        This gives us:
+
+        $$\boxed{\lambda=873.8[\si{\nano\meter}]}$$
+
+      \item Since light is visible from roughly 380 to 700 nanometers, this is not in the visible range (it is in the infrared range)
+
+      \item We can find the energy gap of the given material to be $E_g=1.1[\si{eV}]$. Thus, we may calculate the wavelength as:
+
+        $$\lambda=\frac{(4.136\cdot10^{-15})(3\cdot10^{8})}{1.1}$$
+
+        This gives us:
+
+        $$\lambda_{\ce{GaAs}}=1.128[\si{\micro\meter}]$$
+
+        Since the cutoff wavelength of the given material is higher than that of the aforementioned set up, we may conclude that this detector \underline{will be able to detect} the $873.8[\si{\nano\meter}]$ wavelength.
+
+    \end{enumerate}
+
+  \item From the table, we may obtain the following important values:
+
+    $$E_g=.66[\si{eV}]$$
+    $$m_h^*=.40m_e$$
+    $$m_e^*=.56m_e$$
+
+    Then, we may use our formula for the density of states:
+
+    $$N_C=2\left[\frac{2\pi m_e^*k_BT}{h^2}\right]^{\frac{3}{2}}$$
+    $$N_V=2\left[\frac{2\pi m_h^*k_BT}{h^2}\right]^{\frac{3}{2}}$$
+
+    We may thus write:
+
+    $$N_C=2\left[\frac{2\pi \cdot.56\cdot9.1\cdot10^{-31}\cdot 1.38\cdot10^{-23}\cdot300}{(6.626\cdot10^{-34})^2}\right]^{\frac{3}{2}}$$
+    $$N_V=2\left[\frac{2\pi \cdot.4\cdot9.1\cdot10^{-31}\cdot 1.38\cdot10^{-23}\cdot300}{(6.626\cdot10^{-34})^2}\right]^{\frac{3}{2}}$$
+
+    We calculate to get:
+
+    $$\boxed{N_C=1.0493\cdot10^{25}\left[ \si{\per\meter\cubed} \right]}$$
+    $$\boxed{N_V=6.3343\cdot10^{24}\left[ \si{\per\meter\cubed} \right]}$$
+
+    We then use the expression for the intrinsic carrier concentration:
+
+    $$n_i=\sqrt{N_CN_V}e^{-\frac{E_g}{2k_BT}}$$
+
+    Using our values:
+
+    $$n_i=\sqrt{(1.0493\cdot10^{25})(6.3343\cdot10^{24})}e^{-\frac{.66}{2(8.6\cdot10^{-5})(300)}}$$
+
+    This gives us:
+
+    $$\boxed{n_i=2.2718\cdot10^{19}[\si{\per\meter\cubed}]}$$
+
+    Using the values from the table, we may get:
+
+    $$n_i=\sqrt{(1.04\cdot10^{25})(6\cdot10^{24})}e^{-\frac{.66}{2(8.6\cdot10^{-5})(300)}}$$
+    $$\boxed{n_i=2.2012\cdot10^{19}[\si{\per\meter\cubed}]}$$
+
+    Finally, we can use this to calculate the intrinsic resistivity. We know that:
+
+    $$\rho=\frac{1}{\sigma}$$
+
+    And that:
+
+    $$\sigma=en_1(\mu_c+\mu_h)$$
+
+    We then get:
+
+    $$\rho=\frac{1}{(1.6\cdot10^{-19})(2.2012\cdot10^{19})(.39+.19)}$$
+    $$\rho=(2.0427)^{-1}$$
+    $$\boxed{\rho=.4895[\si{\ohm\meter}]}$$
+
+    Note that, using our calculated intrinsic carrier concentration we obtain a slightly different value:
+
+    $$\rho=\frac{1}{(1.6\cdot10^{-19})(2.2718\cdot10^{19})(.39+.19)}$$
+    $$\rho=(2.1082)^{-1}$$
+    $$\boxed{\rho=.4743[\si{\ohm\meter}]}$$
+
+  \item We can express the formula for Fermi level as:
+
+    $$\Delta E=\frac{k_BT}{2}\ln\left( \frac{m_h^*}{m_e^*} \right)$$
+
+    We expand $\Delta E$ to:
+
+    $$\Delta E=E_f-E_i$$
+
+    With $E_f$ representing the Fermi level and $E_i$ representing the intrinsic (middle of the bandgap) Fermi level. As such, we write:
+
+    $$E_f-E_i=\frac{k_BT}{2}\ln\left( \frac{m_h^*}{m_e^*} \right)$$
+
+    We can write $m_h^*$ and $m_e^*$ from the table to write the ratios for each material:
+
+    $$\ce{Ge}\to\frac{.4}{.56}=.7143$$
+    $$\ce{Si}\to\frac{.6}{1.08}=.5556$$
+    $$\ce{GaAs}\to\frac{.5}{.067}=7.4627$$
+
+    We then apply this to the formula:
+
+    $$\ce{Ge}\to\frac{(8.617\cdot10^{-5}\cdot300)}{2}\ln(.7143)$$
+    $$\ce{Si}\to\frac{(8.617\cdot10^{-5}\cdot300)}{2}\ln(.5556)$$
+    $$\ce{GaAs}\to\frac{(8.617\cdot10^{-5}\cdot300)}{2}\ln(7.4627)$$
+
+    This gives us:
+
+    $$\Delta E_{\ce{Ge}}=-4.3488\cdot10^{-3}[\si{eV}]$$
+    $$\Delta E_{\ce{Si}}=-7.5964\cdot10^{-3}[\si{eV}]$$
+    $$\Delta E_{\ce{GaAs}}=.025979[\si{eV}]$$
+
+    Given that we may rewrite with the intrinsic energy band gap, we may observe that Germanium and Silicon are below the intrinsic band gap by -4.3488 and -7.5964 milli-electron-volts, respectively, and Gallium-Arsenide .025979 electron-volts above the intrinsic band gap. We can calculate the precise Fermi level as:
+
+    $$E_{f,\ce{Ge}}=.33-4.3488\cdot10^{-3}[\si{eV}]$$
+    $$E_{f,\ce{Si}}=.55-7.5964\cdot10^{-3}[\si{eV}]$$
+    $$E_{f,\ce{GaAs}}=.71+.025979[\si{eV}]$$
+
+    Finally, we find:
+
+    $$\boxed{E_{f,\ce{Ge}}=.3257[\si{eV}]}$$
+    $$\boxed{E_{f,\ce{Si}}=.5424[\si{eV}]}$$
+    $$\boxed{E_{f,\ce{GaAs}}=.736[\si{eV}]}$$
+
+  \item First and foremost, we are given:
+
+    $$N_D=10^{15}[\si{\per\centi\meter\cubed}]$$
+
+    From the tables from the problems above, we may obtain:
+
+    $$\mu_e=1350\left[\si{\centi\meter\squared\over\volt\second}\right]$$
+
+    We can apply our formula for conductivity to get:
+
+    $$\sigma=eN_D\mu_e$$
+
+    This gives us:
+
+    $$\sigma=(1.6\cdot10^{-19})(1350)(10^{15})$$
+    $$\boxed{\sigma=.216[\si{\per\ohm\centi\meter}]=21.6[\si{\per\ohm\meter}]}$$
+
+    We then find:
+
+    $$\rho=\frac{1}{\sigma}$$
+    $$\rho=\frac{1}{21.6}$$
+    $$\boxed{\rho=.046296[\si{\ohm\meter}]}$$
+
+\end{enumerate}
+
+\end{document}
+
