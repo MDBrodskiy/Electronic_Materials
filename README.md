@@ -33,6 +33,7 @@
     * [**Homework 2**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW2.pdf)
     * [**Homework 3**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW3.pdf)
     * [**Homework 4**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW4.pdf)
+    * [**Homework 5**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW5.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Exams/)
 
 <!--
