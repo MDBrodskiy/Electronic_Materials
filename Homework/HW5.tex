@@ -26,11 +26,64 @@
 
         \begin{enumerate}[label=\arabic*.]
 
-          \item 
+          \item To find the conductivity, we may use the formula:
 
-          \item 
+            $$\sigma=ne\mu_e$$
 
-          \item 
+            Where $n$ represents the electron concentration, $e$ represents the charge of an electron, and $\mu_e$ is the electron mobility. Given that the mobility of electrons in silicon is:
+
+            $$\mu_{e,27[\si{\celsius}]}=8\cdot10^2\left[ \si{\centi\meter\squared\over\volt\second} \right]$$
+
+            We may substitute to get:
+
+            $$\sigma=\left( 1\cdot10^{17} \right)\left( 1.6\cdot10^{-19} \right)(800)$$
+
+            This gives us:
+
+            $$\boxed{\sigma_{27[\si{\celsius}]}=12.8\left[ \si{\siemens\over\centi\meter} \right]}$$
+
+          \item In intrinsic silicon, we know that:
+
+            $$n_i=N_ce^{-\frac{E_c-E_{fi}}{k_BT}}$$
+
+            In $n$-type doped silicon, we take $n\to N_d$ to get:
+
+            $$N_d=N_ce^{-\frac{E_c-E_{fn}}{k_BT}}$$
+
+            We divide the doped equation by the original to find a ratio:
+
+            $$\frac{N_d}{n_i}=e^{\frac{E_{fn}-E_{fi}}{k_BT}}$$
+
+            We can simplify to get:
+
+            $$\ln\left(\frac{N_d}{n_i}\right)=\frac{E_{fn}-E_{fi}}{k_BT}$$
+
+            We can take the difference in Fermi energies as:
+
+            $$\Delta E_f=E_{fn}-E_{fi}$$
+
+            Using this, we get:
+
+            $$\Delta E_f=k_BT\ln\left(\frac{N_d}{n_i}\right)$$
+
+            We can then substitute our known values to find:
+
+            $$\Delta E_f=\left( 8.617\cdot10^{-5} \right)(300)\ln\left(\frac{10^{17}}{1.45\cdot10^{10}}\right)$$
+            $$\boxed{\Delta E_f=.407[\si{eV}]}$$
+
+            We see that the Fermi energy of the $n$-type doped silicon is .407$[\si{eV}]$ higher than intrinsic silicon
+
+          \item At $T=127[\si{\celsius}]=400[\si{\kelvin}]$, we may find the mobility to be:
+
+            $$\mu_{e,127[\si{\celsius}]}=4.5\cdot10^2\left[ \si{\centi\meter\squared\over\volt\second} \right]$$
+
+            This gives us:
+
+            $$\sigma=\left( 10^{17} \right)(1.6\cdot10^{-19})(450)$$
+
+            And finally:
+
+            $$\boxed{\sigma_{127[\si{\celsius}]}=7.2\left[ \si{\siemens\over\centi\meter} \right]}$$
 
         \end{enumerate}
 
@@ -38,9 +91,38 @@
 
         \begin{enumerate}[label=\arabic*.]
 
-          \item 
+          \item Similar to part (a), we may write:
 
-          \item 
+            $$\sigma=ne\mu_e$$
+
+            We note the net effect of doping as:
+
+            $$n=N_d-N-a$$
+            $$n=10^{17}-9\cdot10^{16}$$
+            $$n=1\cdot10^{16}\left[ \si{\per\centi\meter\cubed} \right]$$
+
+            Thus, we see that this is still an $n$-type semiconductor. We may note, however, that electron scattering occurs, and, thus, the drift mobility becomes:
+
+            $$\mu_{e,27[\si{\celsius}]}=7\cdot10^2\left[ \si{\centi\meter\squared\over\volt\second} \right]$$
+
+            We then plug in our values to get:
+
+            $$\sigma=(10^{16})(1.6\cdot10^{-19})(700)$$
+            
+            Now we get:
+
+            $$\boxed{\sigma_{n,p,27[\si{\celsius}]}=1.12\left[ \si{\siemens\over\centi\meter} \right]}$$
+
+          \item Using the same formula from part (a), except now with $n=N_d-N_a$, we may get:
+
+            $$\Delta E_f=k_BT\ln\left( \frac{N_d-N_a}{n_i} \right)$$
+
+            This gives us:
+
+            $$\Delta E_f=\left( 8.617\cdot10^{-5} \right)(300)\ln\left( \frac{10^{16}}{1.45\cdot10^{10}} \right)$$
+            $$\boxed{\Delta E_f=3.475[\si{eV}]}$$
+
+            We may notice that the Fermi energy difference has shrunk.
 
         \end{enumerate}
 
@@ -52,15 +134,111 @@
 
     \begin{enumerate}[label=\alph*]
 
-      \item 
+      \item \underline{No, doping will not always increase the conductivity}. For example, take the intrinsic state with $n=p$. Let us then take a $p$-type material (say, Boron), and use it to slightly dope. This will result in $p>n$, which would mean more holes with lower mobility (as opposed to electrons with higher mobility), and, as such, the conductivity would decrease.
 
-      \item 
+      \item We may begin by applying the mass-action law:
 
-      \item 
+        $$np=n_i^2$$
+
+        We isolate $n$ to write:
+
+        $$n=\frac{n_i^2}{p}$$
+
+        We substitute this into the given conductivity equation to get:
+
+        $$\sigma=\frac{en_i^2\mu_e}{p}+pe\mu_h$$
+
+        We want to find the minimum $p$ value, so we proceed to differentiate:
+
+        $$\frac{\partial\sigma}{\partial p}=-\frac{en_i^2\mu_e}{p^2}+e\mu_h$$
+
+        We want to find points at which the sign changes, so we set the partial equal to 0 to get:
+
+        $$-\frac{en_i^2\mu_e}{p^2}+e\mu_h=0$$
+
+        We can then solve for $p$:
+
+        $$\frac{en_i^2\mu_e}{p^2}=e\mu_h$$
+        $$\frac{en_i^2\mu_e}{e\mu_h}=p^2$$
+        $$p=\pm\sqrt{\frac{en_i^2\mu_e}{e\mu_h}}$$
+
+        Of course, $p$ can not physically be negative, so we get:
+
+        $$\boxed{p=n_i\sqrt{\frac{\mu_e}{\mu_h}}}$$
+
+        From here, we can substitute this into our conductivity equation to get:
+
+        $$\sigma=\frac{en_i\mu_e}{\sqrt{\frac{\mu_e}{\mu_h}}}+n_i\sqrt{\frac{\mu_e}{\mu_h}}e\mu_h$$
+
+        This gives us a simplified form as:
+
+        $$\sigma_{min}=e\left[n_i\sqrt{\mu_e\mu_h}+n_i\sqrt{\mu_e\mu_h}\right]$$
+        $$\boxed{\sigma_{min}=2en_i\sqrt{\mu_e\mu_h}}$$
+
+      \item From Table 5.1, we may get:
+
+        $$\mu_{e}=1.35\cdot10^3\left[ \si{\centi\meter\squared\over\volt\second} \right]$$
+        $$\mu_{h}=4.5\cdot10^2\left[ \si{\centi\meter\squared\over\volt\second} \right]$$
+
+        Using the equations obtained in (b) we get:
+
+        $$p_m=(1.45\cdot10^{10})\sqrt{\frac{1.35}{.45}}$$
+        $$\boxed{p_m=2.512\cdot10^{10}\left[ \si{\per\centi\meter\cubed} \right]}$$
+
+        We then take our conductivity equation as:
+
+        $$\sigma_{min}=2(1.6\cdot10^{-19})(1.45\cdot10^{10})\sqrt{(1.35\cdot10^3)(.45\cdot10^3)}$$
+        $$\boxed{\sigma_{min}=3.617\left[ \si{\siemens\over\centi\meter} \right]}$$
+
+        We know the intrinsic value of $p$, so we take the ratio to get:
+
+        $$\frac{p_m}{n_i}=\frac{2.512}{1.45}$$
+        $$\frac{p_m}{n_i}=1.7324$$
+
+        We can then find the intrinsic conductivity as:
+
+        $$\sigma_i=\left( 1.6\cdot10^{-19} \right)\left( 1.45\cdot10^{10} \right)\left[ 1.35+.45 \right]\cdot10^{3}$$
+        $$\sigma_i=4.176\cdot10^{-6}[\si{\siemens\over\centi\meter}]$$
+
+        We then take the ratio to write:
+
+        $$\frac{\sigma_{min}}{\sigma_i}=\frac{3.617}{4.176}$$
+        $$\frac{\sigma_{min}}{\sigma_i}=.8661$$
+
+        We may see that $p$-type doping to the quantity calculated above results in a 73.24\% increase in hole concentration, with a 13.39\% decrease in conductivity.
 
     \end{enumerate}
 
-  \item
+  \item We may begin by writing:
+
+    $$\sigma=pq\mu_h$$
+
+    We then convert this to resistivity:
+
+    $$\rho=[pq\mu_h]^{-1}$$
+
+    We can substitute known values (including $p\to N_{dopant}$) to get:
+
+    $$\rho=(1.6\cdot10^{-19})^{-1}N_{dopant}^{-1}\left[ \frac{1+3.745\cdot10^{-18}N_{dopant}}{461.3+2.0335\cdot10^{-18}N_{dopant}} \right]$$
+
+    We take $\rho\to.1$ and then solve:
+
+    $$.1=(1.6\cdot10^{-19})^{-1}N_{dopant}^{-1}\left[ \frac{1+3.745\cdot10^{-18}N_{dopant}}{461.3+2.0335\cdot10^{-16}N_{dopant}} \right]$$
+    $$1.6\cdot10^{-20}N_{dopant}=\left[ \frac{1+3.745\cdot10^{-18}N_{dopant}}{461.3+2.0335\cdot10^{-16}N_{dopant}} \right]$$
+    $$7.3808\cdot10^{-18}N_{dopant}+3.2536\cdot10^{-36}N_{dopant}^2=1+3.745\cdot10^{-18}N_{dopant}$$
+    $$3.2536\cdot10^{-36}N_{dopant}^2+3.6358\cdot10^{-18}N_{dopant}-1=0$$
+
+    We can put this in quadratic form:
+
+    $$N_{dopant}^2+1.175\cdot10^{18}N_{dopant}-3.0735\cdot10^{35}=0$$
+
+    Solving this gives us:
+
+    $$N_{dopant}=2.2028535\cdot10^{17},-1.3952853\cdot10^{18}$$
+
+    Since we know the quantity must be positive, we conclude:
+
+    $$\boxed{N_{dopant}=2.2028535\cdot10^{17}[\si{\per\centi\meter\cubed}]}$$
 
     \setcounter{enumi}{11}
 
@@ -68,9 +246,45 @@
 
     \begin{enumerate}[label=\alph*]
 
-      \item 
+      \item Per the problem, we are given:
 
-      \item 
+        $$N_D=10^{17}[\si{\per\centi\meter\cubed}]$$
+
+        We use this in the given formulas to get:
+
+        $$\mu_e=88+\frac{1252}{1+6.984\cdot10^{-18}(10^{17})}$$
+
+        This gives us:
+
+        $$\mu_e=825.16\left[\si{\centi\meter\squared\over\volt\second}\right]$$
+
+        We then calculate:
+
+        $$\sigma=ne\mu_e$$
+        $$\sigma=(10^{17})(1.6\cdot10^{-19})(825.16)$$
+        $$\boxed{\sigma=13.203\left[ \si{\siemens\over\centi\meter} \right]}$$
+
+      \item Similar to part (1), we write:
+
+        $$N_D=10^{17}[\si{\per\centi\meter\cubed}]$$
+        $$\mu_h=54.3+\frac{407}{1+3.745\cdot10^{-18}(10^{17})}$$
+
+        This gives us:
+
+        $$\mu_h=350.41\left[\si{\centi\meter\squared\over\volt\second}\right]$$
+
+        From here, we may write:
+
+        $$\sigma=pq\mu_h$$
+
+        We take $p\to N_A$ to get:
+
+        $$13.203=N_A(1.6\cdot10^{-19})(350.41)$$
+
+        This gives us:
+
+        $$N_A=\frac{13.203}{350.41(1.6\cdot10^{-19})}$$
+        $$\boxed{N_A=2.3548\cdot10^{17}[\si{\per\centi\meter\cubed}]}$$
 
     \end{enumerate}
 
