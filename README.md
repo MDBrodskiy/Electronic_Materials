@@ -36,7 +36,8 @@
     * [**Homework 4**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW4.pdf)
     * [**Homework 5**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW5.pdf)
     * [**Homework 6**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW6.pdf)
-* [**Exams**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Exams/)
+* [**Research Report**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Report/)
+    * [**Document**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Report/ResearchReport.pdf)
 
 <!--
   * [**Chapter 1**](#Notes/Chapter\ 1)
