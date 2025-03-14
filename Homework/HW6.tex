@@ -86,15 +86,19 @@
 
         Thus, we use our given values to write:
 
-        $$P=(4)(8.85\cdot10^{-12})(4\cdot10^5)$$
+        $$P=(3)(8.85\cdot10^{-12})(4\cdot10^5)$$
 
         We solve to get:
 
-        $$\boxed{P=1.416\cdot10^{-5}\left[ \si{\coulomb\over\square\meter} \right]}$$
+        $$\boxed{P=1.062\cdot10^{-5}\left[ \si{\coulomb\over\square\meter} \right]}$$
 
-      \item 
+      \item Since the external electric field is uniform, the volume-bound charge density \underline{would be zero}. This is confirmed by the relation:
 
-      \item 
+        $$-\nabla P=\rho_b$$
+
+        We may observe that, since the polarization is constant (again, due to the uniform magnetic field), the gradient, and, therefore, bound charge density, is zero.
+
+      \item Per the formula from part (a), doubling the susceptibility would double the polarization; however, as stated in part (b), despite the increase in susceptibility, since the field is uniform, the \underline{volume-bound charge density remains 0}
 
     \end{enumerate}
 
@@ -114,11 +118,30 @@
         $$\boxed{\varepsilon_{r,5M}=5.05}$$
         $$\boxed{\varepsilon_{r,50M}=2.8446}$$
 
-      \item We may observe that \underline{permittivity decreases as frequency increases}. Based on the capacitance formula, $C=\varepsilon A/d$, we know that capacitance is directly proportional to permittivity. Furthermore, we know that the frequency response of a capacitor is inversely proportional to frequency per $C=(j\omega Z)^{-1}$. As such, by extension we may conclude that \underline{permittivity is inversely proportional to frequency}.
+      \item We may observe that \underline{permittivity decreases as frequency increases}; however, we must note that, as the frequency increases, the significance of the frequency-dependent term with respect to the permittivity decreases. That is, the permittivity stabilizes at higher frequencies (around 2.8 in this case). This falls in line with our expectations of dielectric dispersion, which states that dipolar polarization does not adjust fast enough to the rapid oscillations of the external field. As a result, the dipoles within the material do not respond to such changes in the field, which reduces the dielectric's charge storing capability, and, consequently, the permittivity.
 
-      \item By incorporating this dielectric into high-frequency RF applications, we would need to \underline{account for the decreasing dielectric relative permittivity} with respect to frequency. Note that, one frequency is great enough, the relative permittivity remains fairly stable, just above 2.8.
+      \item Incorporating this dielectric into a high-frequency RF circuit would mean we have to take the following into account:
 
-      \item 
+        \begin{enumerate}
+
+          \item Voltage Breakdown — The variation in permittivity with respect to frequency would mean a lower breakdown voltage at lower frequencies. Thus, we should account for the strictest (worst-case scenario) values of the breakdown voltage in case of a drop in frequency
+
+          \item Shift in Capacitance — Due to the lowering of the permittivity at higher frequencies, we would expect the capacitance to drop at high frequencies as well, since one is directly proportional to the other
+
+          \item Dielectric Losses — We must take into account the dissipation factor ($\tan(\delta)$) when designing the circuit, as even a small amount of heat dissipation at high frequencies may lead to overheating of the circuit
+
+        \end{enumerate}
+
+      \item We may calculate the energy loss per cycle as:
+
+        $$E=2\pi \tan(\delta)$$
+
+        Thus, we get:
+
+        $$E=2\pi(.02)$$
+        $$\boxed{E=.1257=12.57\%}$$
+
+        High losses in the dielectric, such as the one above, may result in significant energy dissipation (usually through heat) and degraded signal quality ($Q$ factor). As such, we want to take into account factors that may lead to loss when designing circuits, one of which could be the loss factor of a dielectric.
 
     \end{enumerate}
 
