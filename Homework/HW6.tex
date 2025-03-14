@@ -1,0 +1,128 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Electronic Materials
+% Professor: J. Adams
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 6}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: J. Adams}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item Per our formulas, we define capacitance as:
+
+        $$C_{eff}=\frac{\varepsilon_r\varepsilon_oA}{d}$$
+
+        We enter the given values to find:
+
+        $$C_{eff}=\frac{4.5\cdot(8.85\cdot10^{-12}) \cdot120(10^{-2})^2}{1.5\cdot10^{-3}}$$
+
+        This gives us:
+
+        $$\boxed{C_{eff}=.3186[\si{\nano\farad}]}$$
+
+      \item The energy of a capacitor is given by:
+
+        $$E_C=\frac{1}{2}CV^2$$
+
+        We enter our given values and capacitance from (a) to get:
+
+        $$E_C=\frac{1}{2}(.3186\cdot10^{-9})(500)^2$$
+        $$\boxed{E_C=3.9825\cdot10^{-5}[\si{\joule}]}$$
+
+      \item We can calculate the maximum voltage as:
+
+        $$V=\frac{Ed}{\varepsilon_r}$$
+
+        Using our values, we get:
+
+        $$V=\frac{1}{4.5}(250\cdot10^{5})(1.5\cdot10^{-3})$$
+        $$\boxed{V=8.33\bar{3}[\si{\kilo\volt}]}$$
+
+      \item We know that the energy may also be expressed as:
+
+        $$E_C=\frac{Q^2}{2C}$$
+
+        Thus, we may calculate our charge quantity as:
+
+        $$Q=\sqrt{(2)(.3186\cdot10^{-9})(3.9825\cdot10^{-5})}$$
+        $$Q=1.593\cdot10^{-7}[\si{\coulomb}]$$
+
+        We can then calculate the changed capacitance, since the dielectric is removed, which would imply $\varepsilon_r=1$:
+
+        $$C\prime=\frac{\varepsilon_oA}{d}$$
+
+        This gives us:
+
+        $$C\prime=70.8[\si{\pico\farad}]$$
+
+        We now recalculate the energy to see:
+
+        $$E_C=\frac{(1.593\cdot10^{-7})^2}{2(70.8\cdot10^{-12})}$$
+        $$\boxed{E_C=1.7921\cdot10^{-4}[\si{\joule}]}$$
+
+        We can see that the energy is increased by a factor of $\varepsilon_r$, or, in this case, 4.5 times.
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item We may write the polarization as:
+
+        $$P=\chi_e\varepsilon_oE$$
+
+        Thus, we use our given values to write:
+
+        $$P=(4)(8.85\cdot10^{-12})(4\cdot10^5)$$
+
+        We solve to get:
+
+        $$\boxed{P=1.416\cdot10^{-5}\left[ \si{\coulomb\over\square\meter} \right]}$$
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item We can write each given case as:
+
+        $$\varepsilon_{r,1M}=2.8+\frac{4.5}{1+(.2)^2}$$
+        $$\varepsilon_{r,5M}=2.8+\frac{4.5}{1+(1)^2}$$
+        $$\varepsilon_{r,50M}=2.8+\frac{4.5}{1+(10)^2}$$
+
+        This gives us:
+
+        $$\boxed{\varepsilon_{r,1M}=7.1269}$$
+        $$\boxed{\varepsilon_{r,5M}=5.05}$$
+        $$\boxed{\varepsilon_{r,50M}=2.8446}$$
+
+      \item We may observe that \underline{permittivity decreases as frequency increases}. Based on the capacitance formula, $C=\varepsilon A/d$, we know that capacitance is directly proportional to permittivity. Furthermore, we know that the frequency response of a capacitor is inversely proportional to frequency per $C=(j\omega Z)^{-1}$. As such, by extension we may conclude that \underline{permittivity is inversely proportional to frequency}.
+
+      \item By incorporating this dielectric into high-frequency RF applications, we would need to \underline{account for the decreasing dielectric relative permittivity} with respect to frequency. Note that, one frequency is great enough, the relative permittivity remains fairly stable, just above 2.8.
+
+      \item 
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+
