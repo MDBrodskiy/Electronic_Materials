@@ -29,6 +29,7 @@
     * [**Conduction in Metals**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture7.pdf)
     * [**Semi-Conductors**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture8.pdf)
     * [**Dielectrics**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture9.pdf)
+    * [**Ferroelectrics**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/Lecture10.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Homework/)
     * [**Homework 1**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW1.pdf)
     * [**Homework 2**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW2.pdf)
