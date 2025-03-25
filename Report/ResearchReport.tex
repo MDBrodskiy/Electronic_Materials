@@ -4,6 +4,7 @@
 %Template version as of 6/27/2024
 
 \usepackage{cite}
+\usepackage{float}
 \usepackage{siunitx}
 \usepackage{hyperref}
 \hypersetup{
@@ -74,6 +75,11 @@ Boston, MA\\
 
 \section{Introduction}
 
+Two-dimensional (2D) materials are a mere one or two atoms thick but have a tremendous impact on the electronics industry. One of the more interesting aspects of these materials is that most allow for the transfer of electrons within them and, thus are conductive. 
+
+This creates various ways to manipulate these materials, such that they can be stacked, bent, twisted, etc. to create different effects. 
+One of the challenges of 2D materials is that they are exceptionally difficult to synthesize, especially in a consistent and scalable manner. This has limited the functionality and implementations of these materials, but the future holds promise in unlocking the full capability of these materials.
+
 \section{Graphene}
 
 \subsection{Material Structure}
@@ -98,6 +104,259 @@ Though the material itself is highly suitable for use within electronic devices,
 
 \section{Hexagonal Boron Nitride (hBN)}
 
+\subsection{Material Overview}
+
+Hexagonal Boron Nitride (referred to as hBN) is a covalently-bonded hexagonal structure that draws great similarity to graphite. hBN is typically found to be multi-layered, which can be imagined as a sheet. These layers are held together by rather weak van der Waals forces, creating peculiar properties when comparing single and multi-layered hBN sheets. Due to this structure, hBN exemplifies high chemical stability and high optical transparency.
+
+Though the physical structure of hBN is similar to that of graphite, unlike graphite, hBN is an insulator due to a lack of delocalized electrons and \cite{b9} free of dangling bonds. This marks hBN as one of the only insulating 2D materials. The surface of hBN is atomically smooth, lacking charge-trapping sites, thus making hBN a viable substrate for forming van der Waals heterostructures with graphene and other 2D materials. Unlike typical substrates with insulating layers (SiO2 for example), hBN substrates allow for the full electronic and optical properties of 2D materials to be exploited. \cite{b10}
+
+One of the most interesting material properties of hBN is its bandgap, a topic that continues to be debated. The first theoretical calculations allude to hBN having an indirect bandgap structure, but experimental results found utilizing optical microscopy suggest hBN having a direct bandgap, consequently allowing for the various optical qualities of the material. High purity crystals were observed to have an intense luminescence peak at 5.76 $[\si{eV}]$ \cite{b9}, which initially was attributed to a direct bandgap. To resolve this, two-photon excitation was implemented, a fluorescence process that can reduce phototoxicity and allow for deeper tissue imaging. This technique requires a fluorophore (a molecule that fluoresces) to be excited by a simultaneous absorption of two photons, as opposed to one. With this implementation, it was discovered that multilayer hBN has an indirect bandgap at 5.955 $[\si{eV}]$.
+
+The curious aspect of hBN’s bandgap structure is its dependence on the number of layers. Monolayer hBN has a direct bandgap, but with the addition of one or more layers, exhibits an indirect bandgap. Because of this structure, this allows for hBN having the capability to be applied to devices within the deep-ultraviolet (DUV) wavelength region, as well as monolayer hBN showing promise for applications within the UV region.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.45\textwidth]{Figures/hBN-Layers}
+  \caption{The variations in the bandgaps of hBN for each layer count}
+  \label{fig:1}
+\end{figure}
+ 
+\subsection{Synthesizing hBN}
+
+The synthesis of hBN is an ongoing challenge, in which its solution could provide a gateway for commercialization of a variety of hBN sensors. Currently, one common method of synthesis is through chemical vapor deposition (CVD), a process in which a solid material is deposited on a substrate through chemical reactions involving a gaseous phase. This has been found to be the most consistent way to synthesize hBN, but large-scale production of hBN has not been achieved.
+
+\subsubsection{Monolayer Synthesis}
+
+Single-crystal hBN monolayers have been created, which is revolutionary for the future applications of hBN \cite{b10}. To accomplish this synthesis, it is important to note the structure of the lattice of hBN. The structure of hBN suggests that a triangular lattice pattern is stronger than that of a hexagonal lattice, making for a more stable configuration on the metal substrates (Cu111 in this case) during synthesis. Typical CVD synthesis of hBN involves the introduction of ammonia borane thermally decomposing and being introduced into a heated chamber (~1000$[\si{\celsius}]$) with argon carrier gas. This then forms an hBN film of primarily triangular structures onto the Cu substrate. Interestingly, when a small amount of oxygen was diluted into the argon carrier gas, the hBN structures took the form of hexagonal lattice \cite{b10}. This is critical, as these hexagonal structures can form a quality hBN monolayer, whereas the triangular lattices typically seen cannot. This is important to future applications of hBN due to the capability for these monolayer sheets to create reliable wafers (similar to an Si wafer) of hBN van der Waals heterostructures, whose implementations will be seen in high-reliability electronic devices.
+ 
+\subsubsection{Multilayer Synthesis}
+
+As discussed in the previous section, monolayer hBN is able to be synthesized utilizing CVD onto a transition metal thin film, but to create multilayer hBN, it has proven challenging. The rationale for the desire of multilayer over monolayer comes from the effects that multilayer hBN can produce, including improving optical properties of transition metal dichalcogenides, as well as for various DUV devices. Additionally, multilayer hBN films can reduce the influences of SiO2 surfaces due to their thickness, while monolayer cannot. This is a crucial fact when considering the field-effect transistors being developed utilizing multilayer hBN alongside graphene and SiO2 (substrate), such that the hBN screens the impurities of the SiO2 (dangling bonds, charge impurities) to improve the intrinsic carrier mobility.
+
+To synthesize multilayer hBN, \cite{b11}, reports successful growth on Fe-Ni alloy foils utilizing CVD. These multilayer stacks were then used to create heterostacks with graphene to create functional FETs, outperforming the SiO$_2$-based ones. The process to accomplish this proves to be scalable, thus has created a gateway for mass-production of more efficient FET devices. The FETs created through this process had very high carrier mobilities (a maximum hole mobility of $10,219 [\si{\centi\meter\squared\per\volt\second}]$ (average, $5,477[\si{\centi\meter\squared\per\volt\second}]$) and electron mobility of $9,571[\si{\centi\meter\squared\per\volt\second}]$ (average, $5,551[\si{\centi\meter\squared\per\volt\second}]$) \cite{b11}. This provides much hope for the future of 2D electronic devices, such that this observed high carrier mobility could reform the semiconductor industry in regard to 2D material implementation.
+
+  \subsection{Applications}
+
+  \subsubsection{DUV LEDs}
+
+These LEDs are used in a plethora of applications, including sterilization, water purification, photocatalysis, and curing processes. The current norm of these applications utilizes AlGaN semiconductors, but the issue is that these semiconductors emit light perpendicular to the surface of the plane. This makes for a weaker beam than if the light was emitted parallel to the plane, which is the case for an hBN DUV LED. This allows for a stronger beam, which in a process such as sterilization is crucial as it will be much more effective in neutralizing unwanted agents.
+
+  \subsubsection{DUV PDs}
+
+Deep ultraviolet photodetectors, like DUV LEDs, are currently made with primarily AlGaN or GaN-based semiconductors, SiC semiconductors, amongst other similar 2D materials. The purpose of these photodetectors applies to a range of applications including flare detection systems, air purification devices, and advanced communication technologies. hBN has been developed into multiple different DUV-PDs, which have been obtained due to its bandgap lying within the DUV region. It has been found that the addition of another material (such as copper whilst creating a Schottky junction), as well as the addition of graphene for heterostructures, allow for a much more responsive PD than that of a single-hBN-based PD.
+
+  \subsubsection{Perfect IR Absorbers/Emitters}
+
+hBN holds much promise in the realm of photonic devices operating in the infrared (IR) region, for specific applications such as radiative cooling, IR sensors, and biosensing. hBN is a viable suitor for such devices due to its inherent hyperbolic properties, enabling strong light confinement and efficient emission/absorption. By adjusting layer count and thickness, the thermal radiation and absorption properties can be tuned, such as creating a device with exact specifications for a variety of applications. The driving factor in utilizing hBN for these devices is its efficiency, as the current IR devices, although efficient, lack the tremendous efficiency seen by hBN within these applications. There is still much to be done in the form of research, but the future of IR appears to definitively have hBN involved.
+
+\section{Silicene}
+
+Similar to graphene, silicene is a 2D hexagonal structure, except with silicon atoms instead of carbon. Unlike graphene, silicene adopts a periodically buckled topology, where the atoms alternate being in the upper or lower positions (while still being a 1 atom thick layer).
+
+This buckling behaviour is caused by differences in the sp hybridization of C and Si. For carbon, $sp^2$ is energetically favorable, while $sp^3$ hybridization is more favorable for silicon. This difference precludes many of the manufacturing techniques for graphene being applicable to silicene \cite{b13}.
+
+Similar to bulk silicon, silicene easily oxidizes when exposed to normal atmospheric conditions, which ruins its desired properties. Bulk silicon is normally put through a thermal oxidization process as part of the semiconductor manufacturing process, however this approach does not work for 2D materials. Proposed solutions to this problem include complete encapsulation (likely with polymers or metal oxides) and passivation. Depending on the elements introduced in the passivation process, new behaviours can be introduced to the silicene \cite{b14}.
+
+One of the intersting properties of silicene is its bandgap. Being a semi-metal, unmodified silicene does not have a bandgap, making it useless for semiconductor applications. Luckily, the bandgap of silicene can be modified using many different approaches. Topological changes, such as forming nanoribbons, can affect the bandgap, as can the substrate that the silicene is manufactured on. The introduction of other elements into or in between the silicene structure can also create a bandgap, including any materials introducted to prevent oxidization of the silicene. Finially, silicene's bandgap is vulnerable to modification by external electric fields \cite{b14}.
+
+Despite the challenges with silicene production, it has the possibility to provide breakthroughs in semiconductor development. The inherently smaller size of silicene compared to bulk silicon can provide immediate benefits in the miniturization of transistors, while the stacking of silicene layers provides opprotunities for the development of new types of transistors \cite{b14,b13}.
+
+\section{Molybdenum Disulfite (MoS$_2$)}
+
+Two-dimensional (2D) semiconducting materials, particularly MoS$_2$, have shown promise for electronic and optoelectronic applications due to their high mobility. However, achieving high-performance devices requires addressing several challenges, including improving 2D material quality, optimizing dielectrics, and reducing contact resistance. While significant progress has been made in optimizing fabrication processes and reducing defect density, further research is needed to address stability issues and enhance device performance for practical applications.
+
+\begin{itemize}
+
+  \item  TMDCs [DEFINE ACRONYMS ON FIRST USE] are layered compounds with MX$_2$ structure, where a covalently-bonded atomic plane of transition metal (M: groups IV to VII elements) is sandwiched between two atomic planes of chalcogen atoms (X: S, Se, and Te). These three-atom-thick monolayers are held together by weak van der Waals force, forming a layered structure as shown in crystal structure of MoS2 in figure 1(a) [WHAT IS THIS REFERRING TO?]. TMDCs have different electrical and optical properties depending on their chemical compositions, crystal structures, number of layers, and layer stacking sequence. 
+
+\end{itemize}
+
+\subsection{Uses of MoS$_2$}
+
+\begin{itemize}
+
+  \item 2D Tunneling Devices — ``Vertical tunneling devices based on vdW heterostructures show a steep transition slope of turn-on current at low power due to the sharpness of the band edges in atomically smooth hetero-interfaces. As shown in figure 7(a), the vertically-stacked 2D tunnel transistors were demonstrated by using atomically thin tunnel barriers of h-BN or MoS2 sandwiched between top and bottom graphene layers.''
+
+  \item 2D Memories — ``2D memory devices, widely used for electronic non-volatile memories, have been realized by introducing atomically thin charge-trapping layers that act as floating gate in vertical vdW heterostructures. As shown in figure 8(a), Choi et al reported two different types of memory devices based on 2D vdW heterostructures. The first type had graphene as channel, h-BN as tunnel barrier, and MoS2 as charge-trapping layer. This device exhibited a large gate hysteresis window (~20 $\si{V}$) but a very low on/off ratio (~2), due to the zero bandgap and high mobility (4200 $\si{\centi\meter\squared\per\volt\second}$) of graphene. The second type of memory device had MoS$_2$ as channel and graphene as charge-trapping layer and showed high program/erase current ratio (~105), large memory window (18 $\si{\volt}$) and low operation voltage (50 $\si{\milli\volt}$), despite the low mobility (40 $\si{\centi\meter\squared\per\volt\second}$) of the MoS$_2$ channel. Those device parameters are competitive with those attained by organic transistor memory devices. Vu et al similarly developed two-terminal floating-gate memories with MoS2 channel, graphene floating gate and h-BN tunnel barrier.''
+
+\end{itemize}
+
+\section{2D Materials in Electronics}
+
+\subsection{Semiconductor Integration}
+
+\begin{itemize}
+
+  \item Chemical Vapor Deposition (CVD)
+
+    \begin{itemize}
+
+      \item Process were gas is in a reaction chamber, the gases then react and decompose in a heard surface which form a thin solid film 
+
+      \item It is an essential for 2D material to synthesize thin layers and some of these steps include precursors, substrate preparation, and growth conditions 
+
+      \item CVD is crucial in semiconductor manufacturing 
+
+        \begin{itemize}
+
+          \item Low Pressure CVD — this is used for highly uniformed films over large wafers 
+
+          \item Metal Organic CVD
+
+            \begin{itemize}
+
+              \item This is common in the growth of III-V semiconductors used for electronic devices 
+
+            \end{itemize}
+
+        \end{itemize}
+
+      \item The importance of using CVD for 2D Materials and Semiconductors 
+
+        \begin{itemize}
+
+          \item Control of the thickness precisely 
+
+          \item It can be scaled for large-area growth 
+            
+          \item Less defect with higher crystal quality
+
+          \item It is suitable for complex materials 
+
+        \end{itemize}
+
+      \item Adhesive Wafer Bonding 
+
+        \begin{itemize}
+
+          \item This is a proces that is used to bond two wafers with an adhesive layer and it is valuable to integrate delicate materials 
+
+          \item Adhesive wafer bonding functions: 
+
+            \begin{itemize}
+
+              \item Begins by preparing the surface & ensuring there isn’t contamination 
+
+              \item Then a polymer based adhesive is interested onto the wafers & then they are aligned and put in contact 
+
+              \item The adhesive is then cured 
+
+            \end{itemize}
+
+          \item Importance in Semiconductors 
+
+            \begin{itemize}
+
+              \item Integrating materials onto silicon for photonic devices 
+
+              \item Enable 3D integration in advanced chip designs 
+
+              \item It also facilitates temperature sensitive materials bonding without the need for excessive heat exposure 
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Van der Waals Forces 
+
+    \begin{itemize}
+
+      \item A lot of 2D materials (graphene, MoS2 \& h-BN) are composed of small layer that are held by these forces 
+
+      \item The interactions are necessary for the structure 
+
+      \item Importance in 2D Materials 
+
+        \begin{itemize}
+
+          \item Layered structure stability 
+
+          \item Van der Waals Heterostructures 
+
+          \item Clean interfaces 
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Transfer Techniques 
+
+\end{itemize}
+
+\subsection{Applications}
+
+\begin{itemize}
+
+  \item Enhance electronic devices 
+
+    \begin{itemize}
+
+      \item Ultra thin channels for transistors 
+
+      \item Improves mobility \& conductivity 
+
+      \item Flexible and transparent electronics 
+
+    \end{itemize}
+
+  \item Back end of line integration 
+
+    \begin{itemize}
+
+      \item Low-temperature processing 
+
+      \item Atomic thinness for narrow spaces 
+
+      \item Reduce capacitance 
+
+    \end{itemize}
+
+  \item Quantum computing 
+
+    \begin{itemize}
+
+      \item Topological insulators 
+
+      \item Atomically shaped interfaces 
+
+      \item Bandgaps that are tunable 
+
+    \end{itemize}
+
+  \item Buffer layer technique 
+
+    \begin{itemize}
+
+      \item Stress reduction
+
+      \item Interface quality is enhanced
+
+    \end{itemize}
+
+\end{itemize}
+
+\section{Flexible Electronics with 2D Materials}
+
+Flexible electronics refer to devices and circuits that are printed on stretchable and bendable substrates. This in turn allows for the integration of electronic components in applications where rigid devices and circuits are impractical such as biomedical sensors and wearable devices [CITATION]. The multifunctional properties of 2D materials make them promising candidates for flexible electronics in applications ranging from sensing to wireless communication. These properties range from good carrier mobility, flexibility (up to a 20\% strain), electrostatic control, extremely high optical constants, and the ability to scale down to one atomic layer [CITATION]. The materials that will be examined in this section for their usage in flexible electronics include graphene, black phosphorus (BP), transition metal dichalcogenides (TMDs).
+
+\subsection{Black Phosphorus}
+
+Black Phosphorus (BP), is a popular 2D material used in flexible electronics. BP is an allotrope of phosphorus and it is phosphorus's most stable form. It is composed of layers held together by van-der-waals forces. At a single layer it is called phosphorene and has a puckered honeycomb structure which results in a direction-dependent electrical, optical, and mechanical properties. In addition due to its puckered honeycomb structure a monolayer of BP can sustain tensile strain up to 30\% [CITATION]. It has a bandgap that is tunable, 0.3$[\si{eV}]$ in bulk and up to $2.0[\si{eV}]$ in a monolayer. One drawback of BP is that it oxides quickly which means unless encapsulated it does not have long-term stability. Part of the appeal of BP is its high speed and low energy consumption when compared to other 2d materials such as graphene and TMDs. The zero bandgap of graphene results low-field effect modulation and a high OFF state current which makes it virtually impossible in digital or CMOS logic implementations and TMD’s despite their large band gap and large ON/OFF current ratio, their room temperature carrier mobility (10-100 $[\si{\centi\meter\squared\per\volt\second}]$)  is less than ideal for high-frequency applications. BP has a high room temperature carrier mobility (1000 $[\si{\centi\meter\squared\per\volt\second}]$) and a bandgap that ranges from 0.3 $[\si{eV}]$ in bulk to 2 $[\si{eV}]$ in a monolayer. In this paper, a top-gated transistor was created using BP and had a cutoff frequency of up to $20 [\si{\giga\hertz}]$, and a saturation velocity of 6 million $[\si{\centi\meter\per\second}]$. In addition, the devices when tested under 1.5\% stretch still performed well which makes them ideal for flexible electronics particularly flexible RF devices such as wearable sensors or communication devices.
+
+\subsection{Graphene}
+
+Graphene is used in flexible electronics due to its mechanical and electrical properties. Graphene has fracture strains of 25\%, good optical transmittance, high carrier mobility (10,000 $[\si{\centi\meter\squared\per\volt\second}]$ at room temperature), and good piezoresistive sensitivity. Graphene has been used in a variety of flexible electronic applications including logic devices, energy-harvesting devices, sensors for e-skin applications, and biomedical devices. E-skin, which are electronic systems able to mimic the properties of human skin, such as flexibility, stretchability, biocompatibility, and able to detect changes in pressure, temperature, and humidity. The application of Graphene in E-Skin is particularly groundbreaking because it incorporates all the use cases of graphene including, pressure and temperature sensors, nanogenerators, and flexible transistors. Graphene is used to develop tactile/pressure sensors due to its resistance to oxidation, high electrical conductivity 106 $[\si{\siemens\per\meter}]$ and the ability to be both thin and flexible. In this study a tactile sensor was developed with Graphene that was able to achieve response times of 0.2 $[\si{\milli\second}]$ and sensitivity to touch of up to -5.53 $[\si{\per\kilo\pascal}]$. Graphene has been used in the development of LCD’s, OLED’s, and touchscreens due to its optical, electrical, and mechanical properties. Graphene is highly transparent  with 97.7\% of light transmission in a monolayer. [CITE THIS: In a research paper titled ``Mechanical Stability of Flexible Graphene-Based Displays'' by A Capasso] Investigates the mechanical behavior of a graphene based flexible touch display. Two layers of Graphene were embedded within a polyethylene terephthalate film via chemical vapor deposition. This screen when bent or stretched started to deform into separated patches or ``islands'', although this lowered electrical conductivity the screen is not shattering like a traditional glass screen, it was able to withstand without damage to the screen up to 3\% uniaxial tension, which is an improvement on tempered glass screens which can only withstand 0.2-0.3\% uniaxial tensile strain before cracking. Graphene has also been used to develop flexible field-effect transistors GFET. By depositiving graphene onto flexible substrates via chemical vapor deposition, GFETs can be created that have favorable mechanical and electrical properties. GFETs in this paper were found to withstand strain of up to 1.75\%, compared to tradition silicon FET which is brittle and can withstand less than a 0.1\% strain. GFETs have an insanely fast carrier transport, theoretically up to 200,000 $[\si{\centi\meter\squared\per\volt\second}]$ which make them ideal for communication devices (RF). A weakness of GFET is that it has no bandgap and a low on/off ratio which makes them unsuitable for digital or CMOS logic.
+
+\subsection{Transition Metal Dichalcogenides (TMDs)}
+
+Another popular 2D material used in flexible electronics is transition metal dichalcogenides (TMD’s) materials. TMD’s are composed of few atom polyhedral layers with transition metal atoms sandwiched between layers of chalcogen atoms. TMD’s have been used in flexible field-effect transistors (FET), flexible photodetectors, flexible sensors, and flexible memory devices.TMD are particularly useful  in  high-performance flexible nanoscale field-effect transistors (FET) .  The most common TMD’s in development of FETs  are  MoS$_2$ and WSe$_2 $. Unlike graphene which lacks a band gap and has low resistivity, which makes digital logic impossible, 2D TMDs have band gaps similar to Silicon (2 $[\si{eV}]$), and have led to mobilities of up to $470[\si{\centi\meter\squared\per\volt\second}]$ [CITE]. For example, this paper centers around a new transfer process that results in the highest on-currents to date in 50 $[\si{\nano\meter}]$ channels. High performance MoS2 transistors were developed on flexible substrates that enabled channels of 50 $[\si{\nano\meter}]$ which are the shortest to date in flexible electronics with 2D materials. [CITE] . In addition TMD FETs were able to withstand up to a 2\% strain which makes them a perfect candidate for flexible electronics. TMD’s are also used in biomedical applications of flexible electronics through artificial synaptic simulation. TMDC’s are stable and are not easily decomposed due to reactions with water and oxygen, in addition due to their ultrahigh Ion/Ioff ratio they can be assembled into low power electronics, this allows for ultra thin memristive synapses used in creating artificial synapses [CITE]. In this paper, [CITE: "Flexible transition metal dichalcogenide nanosheets for band-selective photodetection"], photodetectors were fabricated by integrating TMD nanosheets onto flexible substrates. These TMD photodetectors were able to selectively detect specific bands of light due to their unique optical properties that could be tuned using the TMD composition and structure. In addition the photodetector was still able to maintain consistent performance even when under mechanical strain which highlights its ability to be used in flexible electronics.
+
+\section{Conclusion \& Future Outlooks}
+
+The future for hexagonal boron nitride is extensive, and there will undoubtedly be much to see with this material in the coming years. Once multilayer synthesis of hBN is commercialized, there will be great strides within the sanitation and medical industries, due to the advantages a multilayer hBN DUV LED has over the current ones, such as a stronger and more direct illumination. Furthermore, a multilayer hBN and graphene FET have already been created; thus, we can expect to see the commercialization of this device, which has been shown to improve the efficiency of the FET. Finally, in the RF realm in particular that of an effective RF capacitor. Due to its tremendously low-loss dielectric properties at high frequencies, making it a viable option for future implementations within the RF realm.
+
 \section*{References}
 
 The following works were referenced within this meta-analysis.
@@ -111,6 +370,13 @@ The following works were referenced within this meta-analysis.
 \bibitem{b6} Wang, X., Li, Q., & Zhang, Y. (2012). Graphene-based flexible electronics. Journal of materials chemistry, 22(13), 5965-5978.
 \bibitem{b7} Balandin, A. A. (2008). Thermal conductivity of graphene and graphene-based composites. Nano letters, 8(11), 3435-3437.
 \bibitem{b8} Li, X., Wang, X., Zhang, Y., & Bao, W. (2010). Graphene: A versatile material for flexible electronics. Advanced Materials, 22(35), 3877-3890.
+\bibitem{b9} Ogawa S, Fukushima S, Shimatani M. Hexagonal Boron Nitride for Photonic Device Applications: A Review. Materials (Basel). 2023 Feb 28;16(5):2005. doi: 10.3390/ma16052005. PMID: 36903116; PMCID: PMC10004243. 
+\bibitem{b10} Li, J., Samad, A., Yuan, Y. et al. Single-crystal hBN Monolayers from Aligned Hexagonal Islands. Nat Commun 15, 8589 (2024). https://doi.org/10.1038/s41467-024-52944-9
+\bibitem{b11} Fukamachi, S., Solís-Fernández, P., Kawahara, K. et al. Large-area synthesis and transfer of multilayer hexagonal boron nitride for enhanced graphene device arrays. Nat Electron 6, 126–136 (2023). https://doi.org/10.1038/s41928-022-00911-x
+\bibitem{b12} Knobloch, T., Illarionov, Y.Y., Ducry, F. et al. The performance limits of hexagonal boron nitride as an insulator for scaled CMOS devices based on two-dimensional materials. Nat Electron 4, 98–108 (2021). https://doi.org/10.1038/s41928-020-00529-x 
+\bibitem{b13} C. Grazianetti, E. Cinquanta, and A. Molle, “Two-dimensional silicon: the advent of silicene,” 2D Mater., vol. 3, no. 1, p. 012001, Jan. 2016, doi: 10.1088/2053-1583/3/1/012001.
+\bibitem{b14} A. Molle, C. Grazianetti, L. Tao, D. Taneja, Md. H. Alam, and D. Akinwande, “Silicene, silicene derivatives, and their device applications,” Chem. Soc. Rev., vol. 47, no. 16, pp. 6370–6387, 2018, doi: 10.1039/C8CS00338F.
+\bibitem{b15} A. Kara et al., “A review on silicene — New candidate for electronics,” Surface Science Reports, vol. 67, no. 1, pp. 1–18, Jan. 2012, doi: 10.1016/j.surfrep.2011.10.001.
 \end{thebibliography}
 
 \end{document}
