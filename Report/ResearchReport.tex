@@ -192,23 +192,52 @@ Despite the challenges with silicene production, it has the possibility to provi
 
 \section{Molybdenum Disulfite (MoS$_2$) — Oluwalaanu Adeboye}
 
-Two-dimensional (2D) semiconducting materials, particularly MoS$_2$, have shown promise for electronic and optoelectronic applications due to their high mobility. However, achieving high-performance devices requires addressing several challenges, including improving 2D material quality, optimizing dielectrics, and reducing contact resistance. While significant progress has been made in optimizing fabrication processes and reducing defect density, further research is needed to address stability issues and enhance device performance for practical applications.
+\subsection{What is MoS$_2$?}
 
-\begin{itemize}
+Molybdenum disulfide (MoS$_2$) is an example of a transition metal dichalcogenide (TMDC). MoS$_2$ consists of Molybdenum (Mo), which is a transition metal from Group VI, and Sulfur (S), a chalcogen. As a TMDC, it has a layered structure where S atoms sandwich Mo atoms, and these layers are bounded by van Der Waal forces, which makes it easy for them to be separated into single layers, also known as monolayers \cite{oa1}. 
 
-  \item  TMDCs [DEFINE ACRONYMS ON FIRST USE] are layered compounds with MX$_2$ structure, where a covalently-bonded atomic plane of transition metal (M: groups IV to VII elements) is sandwiched between two atomic planes of chalcogen atoms (X: S, Se, and Te). These three-atom-thick monolayers are held together by weak van der Waals force, forming a layered structure as shown in crystal structure of MoS2 in figure 1(a) [WHAT IS THIS REFERRING TO?]. TMDCs have different electrical and optical properties depending on their chemical compositions, crystal structures, number of layers, and layer stacking sequence. 
+\subsection{Properties of MoS$_2$}
 
-\end{itemize}
+In its single or monolayer form, MoS$_2$ behaves like a semiconductor with a direct bandage, making it ideal for use in photodetectors and transistors. It exhibits several exceptional properties in its monolayer form: It has strong light-matter interaction, making it ideal for use in devices like photodetectors, light-emitting devices, and solar cells, and it has large electron-hole pair binding energy, meaning it is more stable and less likely to dissociate, making it ideal for LEDs \cite{oa2}.
 
-\subsection{Uses of MoS$_2$}
+As MoS$_2$ gets thinner in its monolayer form, its carrier mobility improves because the electrons and holes can move more freely. Conversely, MoS$_2$'s carrier mobility decreases as it thickens because more layers results in more scattering and interaction between layers, reducing overall mobility. The theoretical mobility of MoS$_2$ is said to be $354c[\si{\centi\meter\squared\per\volt\per\second}]$ in the monolayer form, but experimental mobilities are lower due to factors like contact resistance, substrate effects, and the quality of the provided MoS$_2$ \cite{oa3}. In its bulk form, meaning several layers are in use, MoS$_2$ behaves more similarly like an indirect bandage semiconductor. In short, given the number of layers, so whether MoS$_2$ is in its bulk layer or monolayer form, that determines its usage since its different forms provide different electronic behavior. 
 
-\begin{itemize}
+\subsection{Phase Transitions in MoS$_2$}
 
-  \item 2D Tunneling Devices — ``Vertical tunneling devices based on vdW heterostructures show a steep transition slope of turn-on current at low power due to the sharpness of the band edges in atomically smooth hetero-interfaces. As shown in figure 7(a), the vertically-stacked 2D tunnel transistors were demonstrated by using atomically thin tunnel barriers of h-BN or MoS2 sandwiched between top and bottom graphene layers.''
+A phase transition is a change in the state or phase of a material where the physical properties change depending on conditions like temperature and pressure. If a material undergoes a phase transition it can shift from being a semiconductor like material to a metal because of changes in its atomic or molecular arrangement. 
 
-  \item 2D Memories — ``2D memory devices, widely used for electronic non-volatile memories, have been realized by introducing atomically thin charge-trapping layers that act as floating gate in vertical vdW heterostructures. As shown in figure 8(a), Choi et al reported two different types of memory devices based on 2D vdW heterostructures. The first type had graphene as channel, h-BN as tunnel barrier, and MoS2 as charge-trapping layer. This device exhibited a large gate hysteresis window (~20 $\si{V}$) but a very low on/off ratio (~2), due to the zero bandgap and high mobility (4200 $\si{\centi\meter\squared\per\volt\per\second}$) of graphene. The second type of memory device had MoS$_2$ as channel and graphene as charge-trapping layer and showed high program/erase current ratio (~105), large memory window (18 $\si{\volt}$) and low operation voltage (50 $\si{\milli\volt}$), despite the low mobility (40 $\si{\centi\meter\squared\per\volt\per\second}$) of the MoS$_2$ channel. Those device parameters are competitive with those attained by organic transistor memory devices. Vu et al similarly developed two-terminal floating-gate memories with MoS2 channel, graphene floating gate and h-BN tunnel barrier.''
+For materials like MoS$_2$, phase transitions involve changes in its crystal structure. The two common crystal phases for MoS$_2$ are the 2H phase, where MoS$_2$ has a hexagonal crystal structure and has semiconducting behavior, and the 1T phase, which is a tetragonal structure. When MoS$_2$ is in the 1T phase, it exhibits metallic behavior, so it conducts electricity more freely than in the semiconducting 2H phase \cite{oa4}. Both chemical treatment and laser irradiation, which involves shining a laser on the material, can initiate a phase change. 
 
-\end{itemize}
+This is important because material properties like electrical conductivity, mechanical strength, and optical properties are largely dependent on the phase a material is in, so phase transitions allow MoS$_2$ to be used in a diverse range of electronics and in different ways. Notably, when MoS$_2$ undergoes a phase transition from the 2H phase top the 1T phase, it can be used in logic circuits, memory storage, or photodetectors \cite{oa4}.
+
+\subsection{Challenges Associated with MoS$_2$ Use}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=.5\textwidth]{Figures/MOS2}
+  \caption{Temperature versus Mobility for various MoS$_2$ characteristics \cite{oa5}}
+  \label{fig:3}
+\end{figure}
+
+The intrinsic mobility of MoS$_2$ are limited by scattering effects from phonons, which are vibrations from the lattice that composes the material, and charge impurities from the base material or adsorbates, which are atoms or ions that attach to the surface of the material because of van der Waals forces, chemical bonds, or electrostatic forces. Figure \ref{fig:3} shows how temperature-dependent mobility can be influenced by factors like phonon scattering where decreases in mobility take place at higher temperatures when phonon scattering is present \cite{oa5}.
+
+The carrier mobility in MoS$_2$ is influenced by both the base material as well as dielectric films, which are thin layers of material that are non-conductive, and the density of impurities in the material. In other words, the presence of non-conductive materials largely affects MoS$_2$'s carrier mobility \cite{oa6}.
+
+\subsection{Optimizing MoS$_2$ Usage}
+
+The intrinsic mobility of MoS$_2$ could be achieved by using hexagonal boron nitride (hBN) as an encapsulation layer, which is a protective layer that surrounds a material to enhance its stability or to prevent it from degrading or from environmental factors. The intrinsic mobility could also be achieved by using graphene as the contact electrode, meaning it would be used as the conductive material that provides a pathway for electric current to enter or exit the 2D material. In events where these optimization techniques have been employed, MoS$_2$ FETs have seen extremely high mobilities of $34,000[\si{\centi\meter\squared\per\volt\per\second}]$ at $5[\si{\kelvin}]$ \cite{oa7}. 
+
+\subsection{MoS$_2$ in Flexible and Optoelectronic Devices}
+
+An MoS$_$2-based FET device was created on a polymer substrate consisting of hexagonal boron nitride (hBN), MoS$_2$, and graphene, which achieved a high electron mobility for trilateral MoS$_2$ FETs of $\approx45[\si{\centi\meter\squared\per\volt\per\second}]$ while working with a low operating gate voltage of $10[\si{\volt}]$ \cite{oa8}. Notably, the devices capabilities are unaffected by physical strains up to 1.5\%, demonstrating the flexibility and mechanical strength that MoS$_2$ provides in flexible electronics \cite{oa8}. 
+ 
+MoS$_2$ has been used as a photo absorbing layer in a phototransistor array. Uniquely, it generates photocurrent under visible light since it has a wide bandgap, which excludes infrared light, so it can be used for optical applications without the need for an infrared filter, unlike conventional silicon-based photodetectors \cite{oa9}. 
+
+When MoS$_2$ contains an odd number of layers, it exhibits piezoelectric properties. This is because the inversion symmetry of its 2H crystal structure in odd layers, which is when every atom or atom group at a certain position is paired with an identical atom or group at the opposition, as if reflected through a central point, is broken or asymmetric when inverted through the central point. As a result, the piezoelectric output decreases as the number of MoS$_2$ layers increases \cite{oa10}.
+
+\subsection{MoS$_2$ in 2D Tunnel Devices}
+
+Tunnel devices are alternatives to MOSFETs. They rely on quantum tunneling for the charge process, which allows for low leakage current and a high `\textsc{ON/OFF}' ratio, or the ratio of the current when the device is on to when it is off. These attributes are important for achieving low-power, high efficiency electronics. Subthreshold swing is a parameter that represents the rate at which current turns on as the gate voltage is increased. MoS$_2$ has been involved in devices that surpass the theoretical minimum subthreshold swing limit for classical thermionic transport. An MoS$_2$ bilayer in a vertical heterostructure with degenerately degenerately doped $p$-type germanium (Ge) forms a tunnel FET, which allows quantum tunneling between the valence band of Ge and the conduction band of MoS$_2$, resulting in a subthreshold swing as low as $3.9\si{\milli\volt\per dec}]$ \cite{oa11}. Tunneling devices use bilayer MoS$_2$ as the channel, which allows for quantum tunneling to occur with a low subthreshold swing. 
 
 \section{2D Materials in Electronics — Daniela Salazar}
 
@@ -427,22 +456,33 @@ This paper revolves around assessing the mechanical capabilities of a graphene b
 This paper revolves around the development of band-selective photodetectors using flexible transition metal dichalcogenide (TMD) nanosheets. By liquid exfoliating TMD powders and binding them to amine-terminated polymers which were then deposited onto a flexible polymer substrate, the authors were able to create a micron-thick two-terminal photodetector. The authors were able to demonstrate that flexible photodetectors could be built with excellent photodetection and withstand bends of up to a $200[\si{\meter}]$ radius. These devices selectively detect both visible and near infrared (NIR) light, through mixing two nanosheets of MoS$_2$, which detects visible light, and MoSe$_2$ which detects NIR light. The devices were also able to maintain performance after 1000 bending cycles, and were able to have $100[\si{\milli\second}]$ response times and were able to have detectivity up to $4\cdot10^{12}$ Jones. The author's novel design of a flexible photodetector opens the ability for the development of wearable health monitors, flexible imaging systems, and smart textiles.
 
 \begin{thebibliography}{00}
-\bibitem{intro} M. C. Lemme, D. Akinwande, C. Huyghebaert, and C. Stampfer, ``2D materials for future heterogeneous electronics,'' Nature Communications, vol. 13, no. 1, p. 1392, Mar. 2022, doi: https://doi.org/10.1038/s41467-022-29001-4.
-\bibitem{mb3} Bolotin, K. I., Sikes, K. J., Jiang, Z., Fudenberg, G., Hone, J., Kim, P., \& Stormer, H. L. (2008). Ultrahigh electron mobility in suspended graphene. Solid State Communications, 146(1-3), 351-355.
-\bibitem{jb3} Fukamachi, S., Sol\'is-Fern\'andez, P., Kawahara, K. et al. Large-area synthesis and transfer of multilayer hexagonal boron nitride for enhanced graphene device arrays. Nat Electron 6, 126–136 (2023). https://doi.org/10.1038/s41928-022-00911-x
-\bibitem{oc1} C. Grazianetti, E. Cinquanta, and A. Molle, ``Two-dimensional silicon: the advent of silicene,'' 2D Mater., vol. 3, no. 1, p. 012001, Jan. 2016, doi: 10.1088/2053-1583/3/1/012001.
-\bibitem{mb1} Novoselov, K. S., Geim, A. K., Morozov, S. V., Jiang, D., Zhang, Y., Dubonos, S. V., ... \& Firsov, A. A. (2004). Electric field effect in atomically thin carbon films. Science, 306(5696), 666-669.
-\bibitem{mb2} Geim, A. K., \& Novoselov, K. S. (2007). The rise of graphene. Nature materials, 6(3), 183-191.
-\bibitem{mb4} Castro Neto, A. H., Guinea, F., Peres, N. M. R., Novoselov, K. S., \& Geim, A. K. (2009). The electronic properties of graphene. Reviews of modern physics, 81(1), 109.
-\bibitem{mb5} A. J. B. A. da Silva, C. R. S. de Lima, J. M. de Lima, C. T. M. G. dos Anjos, J. T. da Silva, and A. F. de Lima, ``Graphene nanohybrids: excellent electromagnetic properties for the absorbing and shielding of electromagnetic waves,'' *J. Mater. Chem. C*, vol. 6, no. 46, pp. 12547-12559, 2018, doi: 10.1039/C7TC05869A.
-\bibitem{mb6} Balandin, A. A., Ghosh, S., Bao, W., Calizo, I., Teweldebrhan, D., Miao, F., \& Lau, C. N. (2008). Superior thermal conductivity of single-layer graphene. Nano letters, 8(3), 902-907.
-\bibitem{mb7} Wang, X., Li, Q., \& Zhang, Y. (2012). Graphene-based flexible electronics. Journal of materials chemistry, 22(13), 5965-5978.
-\bibitem{mb8} Balandin, A. A. (2008). Thermal conductivity of graphene and graphene-based composites. Nano letters, 8(11), 3435-3437.
-\bibitem{mb9} Li, X., Wang, X., Zhang, Y., \& Bao, W. (2010). Graphene: A versatile material for flexible electronics. Advanced Materials, 22(35), 3877-3890.
-\bibitem{jb1} Ogawa S, Fukushima S, Shimatani M. Hexagonal Boron Nitride for Photonic Device Applications: A Review. Materials (Basel). 2023 Feb 28;16(5):2005. doi: 10.3390/ma16052005. PMID: 36903116; PMCID: PMC10004243. 
-\bibitem{jb2} Li, J., Samad, A., Yuan, Y. et al. Single-crystal hBN Monolayers from Aligned Hexagonal Islands. Nat Commun 15, 8589 (2024). https://doi.org/10.1038/s41467-024-52944-9
-\bibitem{oc2} A. Molle, C. Grazianetti, L. Tao, D. Taneja, Md. H. Alam, and D. Akinwande, ``Silicene, silicene derivatives, and their device applications,'' Chem. Soc. Rev., vol. 47, no. 16, pp. 6370–6387, 2018, doi: 10.1039/C8CS00338F.
-\bibitem{oc3} A. Kara et al., ``A review on silicene — New candidate for electronics,'' Surface Science Reports, vol. 67, no. 1, pp. 1–18, Jan. 2012, doi: 10.1016/j.surfrep.2011.10.001.
+  \bibitem{intro} M. C. Lemme, D. Akinwande, C. Huyghebaert, and C. Stampfer, ``2D materials for future heterogeneous electronics,'' \textit{Nature Communications}, vol. 13, no. 1, p. 1392, Mar. 2022, doi: https://doi.org/10.1038/s41467-022-29001-4.
+  \bibitem{mb3} Bolotin, K. I., Sikes, K. J., Jiang, Z., Fudenberg, G., Hone, J., Kim, P., \& Stormer, H. L. (2008). Ultrahigh electron mobility in suspended graphene. \textit{Solid State Communications}, 146(1-3), 351-355.
+  \bibitem{jb3} Fukamachi, S., Sol\'is-Fern\'andez, P., Kawahara, K. \textit{et al}. Large-area synthesis and transfer of multilayer hexagonal boron nitride for enhanced graphene device arrays. \textit{Nat Electron} 6, 126–136 (2023). https://doi.org/10.1038/s41928-022-00911-x
+  \bibitem{oc1} C. Grazianetti, E. Cinquanta, and A. Molle, ``Two-dimensional silicon: the advent of silicene,'' \textit{2D Mater}., vol. 3, no. 1, p. 012001, Jan. 2016, doi: 10.1088/2053-1583/3/1/012001.
+  \bibitem{mb1} Novoselov, K. S., Geim, A. K., Morozov, S. V., Jiang, D., Zhang, Y., Dubonos, S. V., ... \& Firsov, A. A. (2004). Electric field effect in atomically thin carbon films. \textit{Science}, 306(5696), 666-669.
+  \bibitem{mb2} Geim, A. K., \& Novoselov, K. S. (2007). The rise of graphene. \textit{Nature materials}, 6(3), 183-191.
+  \bibitem{mb4} Castro Neto, A. H., Guinea, F., Peres, N. M. R., Novoselov, K. S., \& Geim, A. K. (2009). The electronic properties of graphene. \textit{Reviews of modern physics}, 81(1), 109.
+  \bibitem{mb5} A. J. B. A. da Silva, C. R. S. de Lima, J. M. de Lima, C. T. M. G. dos Anjos, J. T. da Silva, and A. F. de Lima, ``Graphene nanohybrids: excellent electromagnetic properties for the absorbing and shielding of electromagnetic waves,'' \textit{J. Mater. Chem. C}, vol. 6, no. 46, pp. 12547-12559, 2018, doi: 10.1039/C7TC05869A.
+  \bibitem{mb6} Balandin, A. A., Ghosh, S., Bao, W., Calizo, I., Teweldebrhan, D., Miao, F., \& Lau, C. N. (2008). Superior thermal conductivity of single-layer graphene. \textit{Nano letters}, 8(3), 902-907.
+  \bibitem{mb7} Wang, X., Li, Q., \& Zhang, Y. (2012). Graphene-based flexible electronics. \textit{Journal of materials chemistry}, 22(13), 5965-5978.
+  \bibitem{mb8} Balandin, A. A. (2008). Thermal conductivity of graphene and graphene-based composites. \textit{Nano letters}, 8(11), 3435-3437.
+  \bibitem{mb9} Li, X., Wang, X., Zhang, Y., \& Bao, W. (2010). Graphene: A versatile material for flexible electronics. \textit{Advanced Materials}, 22(35), 3877-3890.
+  \bibitem{jb1} Ogawa S, Fukushima S, Shimatani M. Hexagonal Boron Nitride for Photonic Device Applications: A Review. \textit{Materials (Basel)}. 2023 Feb 28;16(5):2005. doi: 10.3390/ma16052005. PMID: 36903116; PMCID: PMC10004243. 
+  \bibitem{jb2} Li, J., Samad, A., Yuan, Y. \textit{et al}. Single-crystal hBN Monolayers from Aligned Hexagonal Islands. \textit{Nat Commun} 15, 8589 (2024). https://doi.org/10.1038/s41467-024-52944-9
+  \bibitem{oc2} A. Molle, C. Grazianetti, L. Tao, D. Taneja, Md. H. Alam, and D. Akinwande, ``Silicene, silicene derivatives, and their device applications,'' \textit{Chem. Soc. Rev.}, vol. 47, no. 16, pp. 6370–6387, 2018, doi: 10.1039/C8CS00338F.
+  \bibitem{oc3} A. Kara \textit{et al}., ``A review on silicene — New candidate for electronics,'' \textit{Surface Science Reports}, vol. 67, no. 1, pp. 1–18, Jan. 2012, doi: 10.1016/j.surfrep.2011.10.001.
+\bibitem{oa1} A. Splendiani \textit{et al}., ``Emerging Photoluminescence in Monolayer MoS$_2$,'' \textit{Nano Letters}, vol. 10, no. 4, pp. 1271–1275, Apr. 2010, doi: https://doi.org/10.1021/nl903868w.
+\bibitem{oa2} R. Kappera \textit{et al}., 11Phase-engineered low-resistance contacts for ultrathin MoS$_2$ transistors,'' \textit{Nature Materials}, vol. 13, no. 12, pp. 1128–1134, Aug. 2014, doi: https://doi.org/10.1038/nmat4080.
+\bibitem{oa3} Z. Huang, W. Zhang, and W. Zhang, ``Computational Search for Two-Dimensional MX$_2$ Semiconductors with Possible High Electron Mobility at Room Temperature,'' \textit{Materials}, vol. 9, no. 9, pp. 716–716, Aug. 2016, doi: https://doi.org/10.3390/ma9090716.
+\bibitem{oa4} Y.-C. Lin, D. O. Dumcenco, Y.-S. Huang, and K. Suenaga, ``Atomic mechanism of the semiconducting-to-metallic phase transition in single-layered MoS$_2$,'' \textit{Nature Nanotechnology}, vol. 9, no. 5, pp. 391–396, Apr. 2014, doi: https://doi.org/10.1038/nnano.2014.64.
+\bibitem{oa5} B. Radisavljevic, A. Radenovic, J. Brivio, V. Giacometti, and A. Kis, ``Single-layer MoS$_2$ transistors,'' \textit{Nature Nanotechnology}, vol. 6, no. 3, pp. 147–150, Jan. 2011, doi: https://doi.org/10.1038/nnano.2010.279.
+\bibitem{oa6} W. Bao, X. Cai, D. Kim, K. Sridhara, and M. S. Fuhrer, ``High mobility ambipolar MoS$_2$ field-effect transistors: Substrate and dielectric effects,'' \textit{Applied Physics Letters}, vol. 102, no. 4, p. 042104, Jan. 2013, doi: https://doi.org/10.1063/1.4789365.
+\bibitem{oa7} X. Cui \textit{et al}., ``Multi-terminal transport measurements of MoS$_2$ using a van der Waals heterostructure device platform,'' \textit{Nature Nanotechnology}, vol. 10, no. 6, pp. 534–540, Apr. 2015, doi: https://doi.org/10.1038/nnano.2015.70.
+\bibitem{oa8} Gwan Hyoung Lee \textit{et al}., ``Flexible and Transparent MoS$_2$ Field-Effect Transistors on Hexagonal Boron Nitride-Graphene Heterostructures,'' vol. 7, no. 9, pp. 7931–7936, Aug. 2013, doi: https://doi.org/10.1021/nn402954e.
+\bibitem{oa9} X. Yu \textit{et al}., ``Atomically thin noble metal dichalcogenide: a broadband mid-infrared semiconductor,'' \textit{Nature Communications}, vol. 9, no. 1, Apr. 2018, doi: https://doi.org/10.1038/s41467-018-03935-0.
+\bibitem{oa10} W. Wu \textit{et al}., ``Piezoelectricity of single-atomic-layer MoS$_2$ for energy conversion and piezotronics,'' \textit{Nature}, vol. 514, no. 7523, pp. 470–474, Oct. 2014, doi: https://doi.org/10.1038/nature13792.
+\bibitem{oa11} D. Sarkar \textit{et al}., ``A subthermionic tunnel field-effect transistor with an atomically thin channel,'' \textit{Nature}, vol. 526, no. 7571, pp. 91–95, Sep. 2015, doi: https://doi.org/10.1038/nature15387.
 \bibitem{tc1} L. Gao, ``Flexible device applications of 2D semiconductors,'' \textit{Small}, vol. 13, no. 25, p. 1603994, 2017, doi: 10.1002/smll.201603994.
 \bibitem{tc2} R. K. Mishra, J. Sarkar, I. Chianella, S. Goel, and H. Y. Nezhad, ``Black phosphorus: The rise of phosphorene in 2D materials applications,'' \textit{Next Materials}, vol. 4, p. 100217, 2024, doi: 10.1016/j.nxmate.2024.100217.
 \bibitem{tc3} Q. Wei and X. Peng, ``Superior mechanical flexibility of phosphorene and few-layer black phosphorus,'' \textit{Applied Physics Letters}, vol. 104, no. 25, p. 251915, Jun. 2014, doi: 10.1063/1.4885215.
@@ -451,7 +491,7 @@ This paper revolves around the development of band-selective photodetectors usin
 \bibitem{tc6} G. Anagnostopoulos, P. N. Pappas, Z. Li, I. A. Kinloch, R. J. Young, K. S. Novoselov, C. Y. Lu, N. Pugno, J. Parthenios, C. Galiotis, and K. Papagelis, ``Mechanical stability of flexible graphene-based displays,'' \textit{ACS Applied Materials \& Interfaces}, vol. 8, no. 34, pp. 22605–22614, Aug. 2016, doi: 10.1021/acsami.6b05227.
 \bibitem{tc7} N. Petrone, I. Meric, J. Hone, and K. L. Shepard, ``Graphene field-effect transistors with gigahertz-frequency power gain on flexible substrates,'' \textit{Nano Letters}, vol. 13, no. 1, pp. 121–125, Dec. 2012, doi: 10.1021/nl303666m.
 \bibitem{tc8} A. Daus, S. Vaziri, V. Chen, C. Koroglu, R. Grady, C. Bailey, H. Lee, K. Brenner, K. Schauble, and E. Pop, ``High-performance flexible nanoscale field-effect transistors based on transition metal dichalcogenides,'' \textit{arXiv preprint arXiv:2009.04056}, 2020, doi: 10.48550/arXiv.2009.04056.
-\bibitem{tc9} D. Velusamy, R. Kim, S. Cha, \textit{et al.}, ``Flexible transition metal dichalcogenide nanosheets for band-selective photodetection,'' \textit{Nature Communications}, vol. 6, p. 8063, 2015, doi: 10.1038/ncomms9063.
+\bibitem{tc9} D. Velusamy, R. Kim, S. Cha, \textit{et al}., ``Flexible transition metal dichalcogenide nanosheets for band-selective photodetection,'' \textit{Nature Communications}, vol. 6, p. 8063, 2015, doi: 10.1038/ncomms9063.
 \end{thebibliography}
 
 \end{document}
