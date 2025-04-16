@@ -39,6 +39,8 @@
     * [**Homework 6**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Notes/HW6.pdf)
 * [**Research Report**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Report/)
     * [**Document**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Report/ResearchReport.pdf)
+* [**Final Exam**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Final/)
+    * [**Document**](https://github.com/MDBrodskiy/Electronic_Materials/tree/master/Final/Final.pdf)
 
 <!--
   * [**Chapter 1**](#Notes/Chapter\ 1)
